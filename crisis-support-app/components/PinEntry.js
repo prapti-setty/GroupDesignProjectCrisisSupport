@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
-export default class PinEntry extends Component {
+export class PinEntry extends Component {
   constructor () {
     super();
     this.state = { result: '', ourText: '' }
@@ -36,6 +36,7 @@ export default class PinEntry extends Component {
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
