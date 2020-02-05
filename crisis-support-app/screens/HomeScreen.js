@@ -11,11 +11,16 @@ import {
 } from 'react-native';
 
 import { MonoText } from '../components/StyledText';
+<<<<<<< Updated upstream
 import PinEntry from '../components/PinEntry';
+=======
+import { PinEntry } from '../components/PinEntry';
+>>>>>>> Stashed changes
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
+      <PinEntry/>
       <ScrollView
         style={styles.container}
         contentContainerStyle={styles.contentContainer}>
