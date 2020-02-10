@@ -1,30 +1,45 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
-export class PinEntry extends Component {
-  constructor () {
-    super();
-    this.state = { result: '', ourText: '' }
+export default class PinEntry extends Component {
+  constructor (props) {
+    super(props);
+    this.state = { result: '', ourText: '', placeholder: "", pinCode: "", hideText: false, keyboardtype: 'default', submitFunction: '',}
   }
 
-  render() {
+  componentDidMount() {
+      this.setState({
+          placeholder: this.props.placeholder,
+          pinCode: this.props.pinCode,
+          hideText: this.props.hideText,
+          keyboardtype: this.props.keyboardtype,
+          submitFunction: this.props.submitFunction,
+      });
+  }
+
+  render(){
     return (
         <View style={styles.textBox}>
           <TextInput
-              placeholder="Enter PIN"
-              underlineColorAndroid='transparent'
-              keyboardType={'numeric'}
-              secureTextEntry={true}
-              onSubmitEditing={({ nativeEvent }) => {
-                  this.setState({ result: nativeEvent.text })
-                  if(nativeEvent.text.toString() == '50'){
+              placeholder={this.state.placeholder}
+              keyboardType={this.state.keyboardtype}
+              secureTextEntry={this.state.hideText}
+              onSubmitEditing={
+              ({ nativeEvent }) => { this.setState({ result: nativeEvent.text });
+                  if(nativeEvent.text.toString() == this.props.pinCode && this.state.submitFunction == 'pin')
+                  {
                       this.setState({ourText: 'good'})
                   }
-                  else{
+                  else if(this.state.submitFunction == 'pin')
+                  {
                       this.setState({ourText: 'bad'})
                   }
+                  else
+                  {
+                      this.setState({ourText: nativeEvent.text})
+                  }
                 }
-              }
+            }
               style={{borderWidth: 1, borderStyle: 'solid', height:30,}}
               returnKeyType={'done'}
           />
