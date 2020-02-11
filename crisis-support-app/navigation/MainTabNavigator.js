@@ -74,7 +74,6 @@ FormStack.path = '';
 
 
 
->>>>>>> Stashed changes
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
