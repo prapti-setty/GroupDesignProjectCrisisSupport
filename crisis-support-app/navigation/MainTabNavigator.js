@@ -13,6 +13,7 @@ const config = Platform.select({
   default: {},
 });
 
+//Define Home
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
@@ -36,6 +37,7 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
+//Define Links
 const LinksStack = createStackNavigator(
   {
     Links: LinksScreen,
@@ -52,6 +54,7 @@ LinksStack.navigationOptions = {
 
 LinksStack.path = '';
 
+// Define Settings
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
@@ -68,6 +71,7 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = '';
 
+//Place Stacks together
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   LinksStack,
