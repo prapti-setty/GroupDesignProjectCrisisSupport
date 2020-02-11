@@ -8,43 +8,56 @@ import {
   Text,
   TouchableOpacity,
   View,
+  SafeAreaView,
 } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-import { MonoText, PinEntry } from '_atoms';
+import { MonoText, PinEntry, NavigationButton } from '_atoms';
 
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
 
   return (
-    <View style={styles.container}>
-      <PinEntry/>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
-          />
-        </View>
+    <SafeAreaView>
+      <View style={styles.container}>
+        <PinEntry/>
+        <ScrollView
+          style={styles.container}
+          contentContainerStyle={styles.contentContainer}>
+          <View style={styles.welcomeContainer}>
+            <Image
+              source={
+                __DEV__
+                  ? require('../assets/images/robot-dev.png')
+                  : require('../assets/images/robot-prod.png')
+              }
+              style={styles.welcomeImage}
+            />
+          </View>
 
-        <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
-        </View>
+          <View style={styles.getStartedContainer}>
+            <DevelopmentModeNotice />
+          </View>
 
-        <View style={styles.helpContainer}>
-          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>
-              Help, it didn’t automatically reload!
-            </Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
-    </View>
+          <View style={styles.helpContainer}>
+            <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
+              <Text style={styles.helpLinkText}>
+                Help, it didn’t automatically reload!
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+        </ScrollView>
+        {/* Obviously the below is very messy, but it is purely functional to enable easy navigation
+        to whatever screens are being worked on  */}
+        <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Complaints (Not done)" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
+      </View>
+
+    </SafeAreaView>
   );
 }
 
