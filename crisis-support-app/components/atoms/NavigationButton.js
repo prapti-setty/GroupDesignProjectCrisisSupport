@@ -8,30 +8,28 @@ import {
   Alert,
 } from 'react-native';
 import Constants from 'expo-constants';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 export default class NavigationButton extends Component {
   constructor (props) {
     super(props);
-    this.state = { title: '',  onPress: {defaultFunc},};
+    this.state = { title: '',  navigationOption: {defaultFunc}, navigateFunction: {}};
   }
 
   componentDidMount() {
       this.setState({
           title: this.props.title,
-          onPress: this.props.onPress,
+          navigationOption: this.props.navigationOption,
+          navigate: this.props.navigateFunction,
       });
   }
 
-  render(){
+  render() {
     return (
-      <SafeAreaView style={styles.container}>
-        <View>
           <Button
             title={this.state.title}
-            onPress={() => this.state.onPress}
+            onPress={() => this.state.navigate(this.state.navigationOption)}
           />
-        </View>
-      </SafeAreaView>
     );
   }
 }
@@ -43,7 +41,6 @@ const defaultFunc = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     marginTop: Constants.statusBarHeight,
     marginHorizontal: 16,
   },
@@ -54,10 +51,5 @@ const styles = StyleSheet.create({
   fixToText: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-  },
-  separator: {
-    marginVertical: 8,
-    borderBottomColor: '#737373',
-    borderBottomWidth: StyleSheet.hairlineWidth,
   },
 });
