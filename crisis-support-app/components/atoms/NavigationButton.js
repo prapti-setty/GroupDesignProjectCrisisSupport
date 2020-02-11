@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Constants from 'expo-constants';
 
-export class NavigationButton extends Component {
+export default class NavigationButton extends Component {
   constructor (props) {
     super(props);
     this.state = { title: '',  onPress: {defaultFunc},};

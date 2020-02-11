@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
 
-export class PinEntry extends Component {
+export default class PinEntry extends Component {
   constructor (props) {
     super(props);
     this.state = { result: '', ourText: '', placeholder: "", pinCode: "", hideText: false, keyboardtype: 'default', submitFunction: '',}
