@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
+import FormTest from '../screens/FormTest';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const config = Platform.select({
@@ -55,6 +56,25 @@ LinksStack.navigationOptions = {
 LinksStack.path = '';
 
 // Define Settings
+const FormStack = createStackNavigator(
+  {
+    Form: FormTest,
+  },
+  config
+);
+
+FormStack.navigationOptions = {
+  tabBarLabel: 'Forms',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-document' : 'md-document'} />
+  ),
+};
+
+FormStack.path = '';
+
+
+
+>>>>>>> Stashed changes
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
@@ -76,6 +96,7 @@ const tabNavigator = createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack,
+  FormStack,
 });
 
 tabNavigator.path = '';

@@ -9,11 +9,13 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-
+import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import { MonoText } from '../components/StyledText';
 import { PinEntry } from '../components/PinEntry';
 
+
 export default function HomeScreen() {
+  
   return (
     <View style={styles.container}>
       <PinEntry/>
