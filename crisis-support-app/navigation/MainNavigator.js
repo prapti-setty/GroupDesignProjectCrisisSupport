@@ -10,17 +10,14 @@ const config = Platform.select({
 
 
 const mainNavigator = createStackNavigator({
-  Settings: {
-    screen: SettingsScreen,
-    path: '',
-    navigationOptions: ({navigation}) => ({
-      title: 'Settings'
-    }),
+    Settings: {
+      screen: SettingsScreen,
+      path: '',
+      navigationOptions: ({navigation}) => ({
+        title: 'Settings'
+      }),
+    },
   },
-  {
-    initialRouteName: 'Settings',
-  },
-});
-
+);
 
 export default mainNavigator;
