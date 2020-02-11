@@ -13,13 +13,7 @@ import {
   Alert,
 } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-import { MonoText } from '../components/StyledText';
-//<<<<<<< Updated upstream
-import PinEntry from '../components/PinEntry';
-//=======
-//import { PinEntry } from '../components/PinEntry';
-//>>>>>>> Stashed changes
-
+import { MonoText, PinEntry } from '_atoms';
 
 export default function FormTest() {
   const [[value1,value2,value3,value4,value5,value6,value7,value8,value9,value10,value11,value12,value13], onChangeText] = React.useState('');
@@ -35,7 +29,7 @@ export default function FormTest() {
 	['4.','Do you or partner organisations have previous experience implementing information kiosks or similar information interventions (such as complaint handling and feedback mechanisms)?',<TextInput onChangeText={text => onChangeText(text)} value4={value4}/>],
 	['5.','Do you or partner organisations have a proven record of strong co-ordination and communication skills that is recognised by other stakeholders?', <TextInput onChangeText={text => onChangeText(text)} value5={value5}/>],
 	['6.','Do you or partner organisations have a pre-existing MOU with government co-ordination agencies and/or referral agencies for implementing information interventions during emergencies?', <TextInput onChangeText={text => onChangeText(text)} value6={value6}/>],
-	['7.','Do you or partner organisations form part of a communications or information pillar/cluster group/platform?', <TextInput onChangeText={text => onChangeText(text)} value7={value7}/>],	
+	['7.','Do you or partner organisations form part of a communications or information pillar/cluster group/platform?', <TextInput onChangeText={text => onChangeText(text)} value7={value7}/>],
 	['8.','Have you or partner organisations engaged other actors, including government, international aid agencies, and local civil society organisations, to learn their opinions regarding the delivery of the information kiosk model?', <TextInput onChangeText={text => onChangeText(text)} value8={value8}/>],
 	['9.','Have these actors expressed their approval of your organisation/partners to implement the information kiosk moel?', <TextInput onChangeText={text => onChangeText(text)} value9={value9}/>],
 	['10.','Do you or your partner organisations have access to the contact information of humanitarian actors linked to the response?', <TextInput onChangeText={text => onChangeText(text)} value10={value10}/>],

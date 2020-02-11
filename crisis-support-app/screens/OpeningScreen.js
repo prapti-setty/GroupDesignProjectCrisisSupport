@@ -10,7 +10,7 @@ import {
   View,
 } from 'react-native';
 
-import { MonoText } from '../components/StyledText';
+import { MonoText } from '_atoms';
 
 export default function OpeningScreen() {
   return (
