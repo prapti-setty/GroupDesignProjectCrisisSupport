@@ -4,7 +4,16 @@ import { StyleSheet, Text, View, TextInput } from 'react-native';
 export default class PinEntry extends Component {
   constructor (props) {
     super(props);
-    this.state = { result: '', ourText: '', placeholder: "", pinCode: "", hideText: false, keyboardtype: 'default', submitFunction: '',}
+    this.state = {
+        result: '',
+        ourText: '',
+        placeholder: "",
+        pinCode: "",
+        hideText: false,
+        keyboardtype: 'default',
+        submitFunction: '',
+        navigationOption: {},
+        navigationFunction: {}}
   }
 
   componentDidMount() {
@@ -14,6 +23,8 @@ export default class PinEntry extends Component {
           hideText: this.props.hideText,
           keyboardtype: this.props.keyboardtype,
           submitFunction: this.props.submitFunction,
+          navigationOption: this.props.navigationOption,
+          navigate: this.props.navigateFunction,
       });
   }
 
@@ -28,11 +39,13 @@ export default class PinEntry extends Component {
               ({ nativeEvent }) => { this.setState({ result: nativeEvent.text });
                   if(nativeEvent.text.toString() == this.props.pinCode && this.state.submitFunction == 'pin')
                   {
+                      () => this.state.navigate(this.state.navigationOption)
                       this.setState({ourText: 'good'})
                   }
                   else if(this.state.submitFunction == 'pin')
                   {
                       this.setState({ourText: 'bad'})
+
                   }
                   else
                   {

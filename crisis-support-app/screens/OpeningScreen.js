@@ -21,7 +21,7 @@ export default function OpeningScreen({ navigation }) {
           <Image
             source={
               __DEV__
-                ? require('../assets/images/robot-dev.png')
+                ? require('../assets/images/trocaire.png')
                 : require('../assets/images/robot-prod.png')
             }
             style={styles.welcomeImage}
@@ -30,10 +30,15 @@ export default function OpeningScreen({ navigation }) {
 
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
+        </View>
 
+        <View style={styles.rectangularButton}>
           <NavigationButton title="Trocaire Staff And Partners" navigationOption={'Admin'} navigateFunction={navigation.navigate}/>
+        </View>
+        <View style={styles.rectangularButton}>
           <NavigationButton title="Community Help and Feedback" navigationOption={'Visitor'} navigateFunction={navigation.navigate}/>
         </View>
+
       </ScrollView>
 
       <View style={styles.bottomBarContainer}>
@@ -104,8 +109,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   welcomeImage: {
-    width: 100,
-    height: 80,
+    width: 600,
+    height: 122,
     resizeMode: 'contain',
     marginTop: 3,
     marginLeft: -10,
@@ -169,5 +174,12 @@ const styles = StyleSheet.create({
   helpLinkText: {
     fontSize: 14,
     color: '#2e78b7',
+  },
+  rectangularButton: {
+    paddingLeft: '40%',
+    paddingRight: '40%',
+    paddingTop: '.5%',
+    paddingBottom: '.5%',
+    alignContent: 'center',
   },
 });

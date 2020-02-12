@@ -23,39 +23,31 @@ export default function AdminScreen({ navigation }) {
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
-            <Image
-              source={
-                __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
-              }
-              style={styles.welcomeImage}
-            />
+
+          <View style={styles.rectangularButton}>
+            <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
+          </View>
+          <View style={styles.rectangularButton}>
+            <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
           </View>
 
-          <View style={styles.getStartedContainer}>
-            <DevelopmentModeNotice />
+          <View style={styles.rectangularButton}>
+            <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
           </View>
 
-          <View style={styles.helpContainer}>
-            <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-              <Text style={styles.helpLinkText}>
-                Help, it didn’t automatically reload!
-              </Text>
-              
-            </TouchableOpacity>
+          <View style={styles.rectangularButton}>
+            <NavigationButton title="Complaints (Not done)" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
           </View>
 
+          <View style={styles.rectangularButton}>
+            <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
+          </View>
+
+          <View style={styles.rectangularButton}>
+            <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
+          </View>
         </ScrollView>
-        <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="Complaints (Not done)" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
       </View>
-
     </SafeAreaView>
   );
 }
@@ -185,5 +177,12 @@ const styles = StyleSheet.create({
   helpLinkText: {
     fontSize: 14,
     color: '#2e78b7',
+  },
+  rectangularButton: {
+    paddingLeft: '40%',
+    paddingRight: '40%',
+    paddingTop: '.5%',
+    paddingBottom: '.5%',
+    alignContent: 'center',
   },
 });

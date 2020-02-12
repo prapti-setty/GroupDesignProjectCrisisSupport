@@ -19,7 +19,14 @@ export default function HomeScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.container}>
-        <PinEntry/>
+        <PinEntry
+            placeholder={'Enter PIN'}
+            hideText={true}
+            pinCode={'123'}
+            submitFunction={'pin'}
+            navigationOption={'Links'}
+            navigateFunction={navigation.navigate}
+        />
         <ScrollView
           style={styles.container}
           contentContainerStyle={styles.contentContainer}>
@@ -47,8 +54,7 @@ export default function HomeScreen({ navigation }) {
             </TouchableOpacity>
           </View>
 
-        </ScrollView>
-        <View style={styles.rectangularButton}>
+          <View style={styles.rectangularButton}>
           <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
         </View>
         <View style={styles.rectangularButton}>
@@ -70,6 +76,9 @@ export default function HomeScreen({ navigation }) {
         <View style={styles.rectangularButton}>
           <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
         </View>
+
+        </ScrollView>
+
       </View>
     </SafeAreaView>
   );
@@ -207,6 +216,5 @@ const styles = StyleSheet.create({
     paddingTop: '.5%',
     paddingBottom: '.5%',
     alignContent: 'center',
-    align: 'center',
   },
 });
