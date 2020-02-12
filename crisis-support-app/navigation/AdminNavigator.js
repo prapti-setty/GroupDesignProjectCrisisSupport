@@ -2,7 +2,7 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import SettingsScreen from '../screens/SettingsScreen';
-import HomeScreen from '../screens/HomeScreen';
+import AdminScreen from '../screens/AdminScreen';
 import LinksScreen from '../screens/LinksScreen';
 import FormTest from '../screens/FormTest';
 
@@ -12,11 +12,11 @@ const config = Platform.select({
   default: {},
 });
 
-const Home = {
-  screen: HomeScreen,
+const Admin = {
+  screen: AdminScreen,
   path: '',
   navigationOptions: ({navigation}) => ({
-    title: 'Home'
+    title: 'Admin'
   }),
 };
 
@@ -46,11 +46,11 @@ const Forms = {
 
 
 const adminNavigator = createStackNavigator({
-    Home: Home,
+    Admin: Admin,
     Settings: Settings,
     Links: Links,
     Forms: Forms,
-  }, {initialRouteName: 'Home'},
+  }, {initialRouteName: 'Admin'},
 );
 
 
