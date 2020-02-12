@@ -47,13 +47,28 @@ export default function HomeScreen({ navigation }) {
           </View>
 
         </ScrollView>
+        <View style={styles.rectangularButton}>
+          <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
+        </View>
+        <View style={styles.rectangularButton}>
+          <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
+        </View>
 
-        <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="Complaints (Not done)" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
-        <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
+        <View style={styles.rectangularButton}>
+          <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
+        </View>
+
+        <View style={styles.rectangularButton}>
+          <NavigationButton title="Complaints (Not done)" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
+        </View>
+
+        <View style={styles.rectangularButton}>
+          <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
+        </View>
+
+        <View style={styles.rectangularButton}>
+          <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -184,5 +199,13 @@ const styles = StyleSheet.create({
   helpLinkText: {
     fontSize: 14,
     color: '#2e78b7',
+  },
+  rectangularButton: {
+    paddingLeft: '40%',
+    paddingRight: '40%',
+    paddingTop: '.5%',
+    paddingBottom: '.5%',
+    alignContent: 'center',
+    align: 'center',
   },
 });

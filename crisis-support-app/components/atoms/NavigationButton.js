@@ -29,6 +29,7 @@ export default class NavigationButton extends Component {
           <Button
             title={this.state.title}
             onPress={() => this.state.navigate(this.state.navigationOption)}
+            color={'rgba(0, 133, 202, 1)'}
           />
     );
   }
