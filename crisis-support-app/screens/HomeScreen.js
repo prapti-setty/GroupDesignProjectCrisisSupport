@@ -17,7 +17,7 @@ import { MonoText, PinEntry, NavigationButton } from '_atoms';
 export default function HomeScreen({ navigation }) {
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <View style={styles.container}>
         <PinEntry/>
         <ScrollView
@@ -47,8 +47,7 @@ export default function HomeScreen({ navigation }) {
           </View>
 
         </ScrollView>
-        {/* Obviously the below is very messy, but it is purely functional to enable easy navigation
-        to whatever screens are being worked on  */}
+
         <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
         <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
         <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
@@ -56,7 +55,6 @@ export default function HomeScreen({ navigation }) {
         <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
         <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
       </View>
-
     </SafeAreaView>
   );
 }
