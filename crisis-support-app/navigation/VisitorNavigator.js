@@ -20,36 +20,8 @@ const Visitor = {
   }),
 };
 
-const Settings = {
-  screen: SettingsScreen,
-  path: '',
-  navigationOptions: ({navigation}) => ({
-    title: 'Settings',
-  }),
-};
-
-const Links = {
-  screen: LinksScreen,
-  path: '',
-  navigationOptions: ({navigation}) => ({
-    title: 'Links',
-  }),
-};
-
-const Forms = {
-  screen: FormTest,
-  path: '',
-  navigationOptions: ({navigation}) => ({
-    title: 'Forms',
-  }),
-};
-
-
 const visitorNavigator = createStackNavigator({
     Visitor: Visitor,
-    Settings: Settings,
-    Links: Links,
-    Forms: Forms,
   }, {initialRouteName: 'Visitor'},
 );
 
