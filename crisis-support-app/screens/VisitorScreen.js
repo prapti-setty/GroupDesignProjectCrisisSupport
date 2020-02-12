@@ -48,6 +48,12 @@ export default function VisitorScreen({ navigation }) {
           </View>
 
         </ScrollView>
+        <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Complaints (Not done)" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
       </View>
 
     </SafeAreaView>
