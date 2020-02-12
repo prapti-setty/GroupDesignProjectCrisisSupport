@@ -45,7 +45,7 @@ const Forms = {
 };
 
 
-const mainNavigator = createStackNavigator({
+const adminNavigator = createStackNavigator({
     Home: Home,
     Settings: Settings,
     Links: Links,
@@ -53,4 +53,6 @@ const mainNavigator = createStackNavigator({
   }, {initialRouteName: 'Home'},
 );
 
-export default mainNavigator;
+
+
+export default adminNavigator;

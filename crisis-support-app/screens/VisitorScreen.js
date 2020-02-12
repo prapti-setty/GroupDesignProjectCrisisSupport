@@ -14,10 +14,10 @@ import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-ta
 import { MonoText, PinEntry, NavigationButton } from '_atoms';
 
 
-export default function HomeScreen({ navigation }) {
+export default function VisitorScreen({ navigation }) {
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView>
       <View style={styles.container}>
         <PinEntry/>
         <ScrollView
@@ -48,34 +48,21 @@ export default function HomeScreen({ navigation }) {
           </View>
 
         </ScrollView>
-        <View style={styles.rectangularButton}>
-          <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
-        </View>
-        <View style={styles.rectangularButton}>
-          <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
-        </View>
-
-        <View style={styles.rectangularButton}>
-          <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
-        </View>
-
-        <View style={styles.rectangularButton}>
-          <NavigationButton title="Complaints (Not done)" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
-        </View>
-
-        <View style={styles.rectangularButton}>
-          <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
-        </View>
-
-        <View style={styles.rectangularButton}>
-          <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
-        </View>
+        {/* Obviously the below is very messy, but it is purely functional to enable easy navigation
+        to whatever screens are being worked on  */}
+        <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Complaints (Not done)" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
       </View>
+
     </SafeAreaView>
   );
 }
 
-HomeScreen.navigationOptions = {
+VisitorScreen.navigationOptions = {
   header: null,
 };
 
@@ -145,7 +132,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: 50,
   },
-  homeScreenFilename: {
+  visitorScreenFilename: {
     marginVertical: 7,
   },
   codeHighlightText: {
@@ -200,13 +187,5 @@ const styles = StyleSheet.create({
   helpLinkText: {
     fontSize: 14,
     color: '#2e78b7',
-  },
-  rectangularButton: {
-    paddingLeft: '40%',
-    paddingRight: '40%',
-    paddingTop: '.5%',
-    paddingBottom: '.5%',
-    alignContent: 'center',
-    align: 'center',
   },
 });

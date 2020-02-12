@@ -9,10 +9,9 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import { MonoText, PinEntry, NavigationButton } from '_atoms';
 
-import { MonoText } from '_atoms';
-
-export default function OpeningScreen() {
+export default function OpeningScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView
@@ -31,6 +30,9 @@ export default function OpeningScreen() {
 
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
+
+          <NavigationButton title="Trocaire Staff And Partners" navigationOption={'Admin'} navigateFunction={navigation.navigate}/>
+          <NavigationButton title="Community Help and Feedback" navigationOption={'Visitor'} navigateFunction={navigation.navigate}/>
         </View>
       </ScrollView>
 
