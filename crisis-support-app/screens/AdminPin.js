@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { MonoText, PinEntry, NavigationButton } from '_atoms';
 
-export default function OpeningScreen({ navigation }) {
+export default function AdminPin({ navigation }) {
   return (
     <View style={styles.container}>
         <View style={styles.welcomeContainer}>
@@ -25,16 +25,21 @@ export default function OpeningScreen({ navigation }) {
           />
         </View>
 
-        <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
+        <View style={styles.developmentModeText}>
+            <Text style={styles.codeHighlightText}>
+                Area Locked. Please enter Admin PIN to access.
+            </Text>
         </View>
 
-        <View style={styles.rectangularButton}>
-          <NavigationButton title="Trocaire Staff And Partners" navigationOption={'AdminPin'} navigateFunction={navigation.navigate}/>
-        </View>
-        <View style={styles.rectangularButton}>
-          <NavigationButton title="Community Help and Feedback" navigationOption={'Visitor'} navigateFunction={navigation.navigate}/>
-        </View>
+        <PinEntry
+            placeholder={'Enter PIN'}
+            hideText={true}
+            pinCode={'123'}
+            submitFunction={'pin'}
+            navigationOption={'Admin'}
+            navigateFunction={navigation.navigate}
+            keyboardType={'numeric'}
+        />
 
       <View style={styles.bottomBarContainer}>
         <Text style={styles.bottomBarInfoText}>
@@ -45,7 +50,7 @@ export default function OpeningScreen({ navigation }) {
   );
 }
 
-OpeningScreen.navigationOptions = {
+AdminPin.navigationOptions = {
   header: null,
 };
 

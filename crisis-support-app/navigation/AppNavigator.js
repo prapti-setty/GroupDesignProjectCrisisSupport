@@ -5,6 +5,7 @@ import MainTabNavigator from './MainTabNavigator';
 import VisitorNavigator from './VisitorNavigator';
 import AdminNavigator from './AdminNavigator';
 import OpeningNavigator from './OpeningNavigator';
+import pinNavigator from "./PinNavigator";
 
 export default createAppContainer(
   createSwitchNavigator({
@@ -14,6 +15,7 @@ export default createAppContainer(
     Opening: OpeningNavigator,
     Visitor: VisitorNavigator,
     Admin: AdminNavigator,
+    AdminPin: pinNavigator,
   },
   {
     initialRouteName: 'Opening',

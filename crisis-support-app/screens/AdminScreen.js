@@ -17,14 +17,19 @@ import { MonoText, PinEntry, NavigationButton } from '_atoms';
 export default function AdminScreen({ navigation }) {
 
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <PinEntry/>
-        <ScrollView
-          style={styles.container}
-          contentContainerStyle={styles.contentContainer}>
+    <View style={styles.container}>
+        <View style={styles.welcomeContainer}>
+          <Image
+            source={
+              __DEV__
+                ? require('../assets/images/trocaire.png')
+                : require('../assets/images/robot-prod.png')
+            }
+            style={styles.welcomeImage}
+          />
+        </View>
 
-          <View style={styles.rectangularButton}>
+        <View style={styles.rectangularButton}>
             <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
           </View>
           <View style={styles.rectangularButton}>
@@ -46,9 +51,13 @@ export default function AdminScreen({ navigation }) {
           <View style={styles.rectangularButton}>
             <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
           </View>
-        </ScrollView>
+
+      <View style={styles.bottomBarContainer}>
+        <Text style={styles.bottomBarInfoText}>
+          This is a bar that constantly stays at the bottom!
+        </Text>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -108,21 +117,31 @@ const styles = StyleSheet.create({
   },
   welcomeContainer: {
     alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
+    paddingLeft: '20%',
+    paddingRight: '20%',
+    height: '30%',
+    marginBottom: '-5%',
+    marginTop: '5%',
+    ...Platform.select({
+      android: {
+        paddingLeft: '20%',
+        paddingRight: '20%',
+        height: '30%',
+        marginBottom: '-30%',
+        marginTop: '25%',
+      },
+    }),
   },
   welcomeImage: {
-    width: 100,
-    height: 80,
+    width: '100%',
+    height: '45%',
     resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
   },
   getStartedContainer: {
     alignItems: 'center',
     marginHorizontal: 50,
   },
-  adminScreenFilename: {
+  openingScreenFilename: {
     marginVertical: 7,
   },
   codeHighlightText: {
@@ -139,7 +158,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     textAlign: 'center',
   },
-  tabBarInfoContainer: {
+  bottomBarContainer: {
     position: 'absolute',
     bottom: 0,
     left: 0,
@@ -159,7 +178,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fbfbfb',
     paddingVertical: 20,
   },
-  tabBarInfoText: {
+  bottomBarInfoText: {
     fontSize: 17,
     color: 'rgba(96,100,109, 1)',
     textAlign: 'center',
@@ -184,5 +203,14 @@ const styles = StyleSheet.create({
     paddingTop: '.5%',
     paddingBottom: '.5%',
     alignContent: 'center',
+
+    ...Platform.select({
+      android: {
+        paddingLeft: '25%',
+        paddingRight: '25%',
+        paddingTop: '4%',
+        paddingBottom: '4%',
+      },
+    }),
   },
 });

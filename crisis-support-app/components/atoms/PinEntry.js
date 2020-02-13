@@ -39,7 +39,7 @@ export default class PinEntry extends Component {
               ({ nativeEvent }) => { this.setState({ result: nativeEvent.text });
                   if(nativeEvent.text.toString() == this.props.pinCode && this.state.submitFunction == 'pin')
                   {
-                      () => this.state.navigate(this.state.navigationOption)
+                      this.state.navigate(this.state.navigationOption);
                       this.setState({ourText: 'good'})
                   }
                   else if(this.state.submitFunction == 'pin')
@@ -57,9 +57,9 @@ export default class PinEntry extends Component {
               returnKeyType={'done'}
           />
 
-          <View style={{alignItems: 'center', justifyContent: 'center',}}>
-            <Text>user input: {this.state.ourText}</Text>
-          </View>
+          {/*<View style={{alignItems: 'center', justifyContent: 'center',}}>*/}
+          {/*  <Text>user input: {this.state.ourText}</Text>*/}
+          {/*</View>*/}
         </View>
     );
   }

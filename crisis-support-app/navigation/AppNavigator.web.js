@@ -5,6 +5,7 @@ import MainTabNavigator from './MainTabNavigator';
 import VisitorNavigator from './VisitorNavigator';
 import AdminNavigator from './AdminNavigator';
 import OpeningNavigator from './OpeningNavigator';
+import pinNavigator from "./PinNavigator";
 
 
 const switchNavigator = createSwitchNavigator({
@@ -14,6 +15,7 @@ const switchNavigator = createSwitchNavigator({
   Opening: OpeningNavigator,
   Visitor: VisitorNavigator,
   Admin: AdminNavigator,
+  AdminPin: pinNavigator,
 },
 {
   initialRouteName: 'Opening',

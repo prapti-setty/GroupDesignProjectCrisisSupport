@@ -2,7 +2,7 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import OpeningScreen from '../screens/OpeningScreen';
-import AdminScreen from '../screens/AdminScreen';
+import AdminPin from '../screens/AdminPin';
 import VisitorScreen from '../screens/VisitorScreen';
 
 
@@ -20,7 +20,7 @@ const Opening = {
 };
 
 const Admin = {
-  screen: AdminScreen,
+  screen: AdminPin,
   path: '',
   navigationOptions: ({navigation}) => ({
     title: 'Trocaire Staff & Partners'
