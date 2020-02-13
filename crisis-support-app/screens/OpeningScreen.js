@@ -14,9 +14,6 @@ import { MonoText, PinEntry, NavigationButton } from '_atoms';
 export default function OpeningScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
           <Image
             source={
@@ -38,8 +35,6 @@ export default function OpeningScreen({ navigation }) {
         <View style={styles.rectangularButton}>
           <NavigationButton title="Community Help and Feedback" navigationOption={'Visitor'} navigateFunction={navigation.navigate}/>
         </View>
-
-      </ScrollView>
 
       <View style={styles.bottomBarContainer}>
         <Text style={styles.bottomBarInfoText}>
@@ -105,15 +100,25 @@ const styles = StyleSheet.create({
   },
   welcomeContainer: {
     alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
+    paddingLeft: '20%',
+    paddingRight: '20%',
+    height: '30%',
+    marginBottom: '-5%',
+    marginTop: '5%',
+    ...Platform.select({
+      android: {
+        paddingLeft: '20%',
+        paddingRight: '20%',
+        height: '30%',
+        marginBottom: '-30%',
+        marginTop: '25%',
+      },
+    }),
   },
   welcomeImage: {
-    width: 600,
-    height: 122,
+    width: '100%',
+    height: '45%',
     resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
   },
   getStartedContainer: {
     alignItems: 'center',
@@ -181,5 +186,14 @@ const styles = StyleSheet.create({
     paddingTop: '.5%',
     paddingBottom: '.5%',
     alignContent: 'center',
+
+    ...Platform.select({
+      android: {
+        paddingLeft: '25%',
+        paddingRight: '25%',
+        paddingTop: '4%',
+        paddingBottom: '4%',
+      },
+    }),
   },
 });
