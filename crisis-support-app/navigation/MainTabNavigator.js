@@ -8,6 +8,7 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import FormTest from '../screens/FormTest';
 import SettingsScreen from '../screens/SettingsScreen';
+import ManualScreen from '../screens/ManualScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -90,12 +91,29 @@ SettingsStack.navigationOptions = {
 
 SettingsStack.path = '';
 
+const ManualStack = createStackNavigator(
+  {
+    Settings: ManualScreen,
+  },
+  config
+);
+
+ManualStack.navigationOptions = {
+  tabBarLabel: 'Manual',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
+  ),
+};
+
+ManualStack.path = '';
+
 //Place Stacks together
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack,
   FormStack,
+  ManualStack,
 });
 
 tabNavigator.path = '';
