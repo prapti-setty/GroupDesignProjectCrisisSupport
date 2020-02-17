@@ -50,7 +50,7 @@ export default function HomeScreen({ navigation }) {
               <Text style={styles.helpLinkText}>
                 Help, it didn’t automatically reload!
               </Text>
-              
+
             </TouchableOpacity>
           </View>
 
@@ -75,6 +75,10 @@ export default function HomeScreen({ navigation }) {
 
         <View style={styles.rectangularButton}>
           <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
+        </View>
+
+        <View style={styles.rectangularButton}>
+          <NavigationButton title = "Kiosk Manual" navigationOption={'Manual'} navigationFunction={navigation.navigate}/>
         </View>
 
         </ScrollView>
