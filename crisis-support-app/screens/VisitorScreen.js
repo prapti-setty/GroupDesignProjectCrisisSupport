@@ -43,7 +43,7 @@ export default function VisitorScreen({ navigation }) {
               <Text style={styles.helpLinkText}>
                 Help, it didn’t automatically reload!
               </Text>
-              
+
             </TouchableOpacity>
           </View>
 
@@ -54,6 +54,7 @@ export default function VisitorScreen({ navigation }) {
         <NavigationButton title="Complaints (Not done)" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
         <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
         <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
+        <NavigationButton title="Kiosk Manual" navigationOption={'Manual'} navigateFunction={navigation.navigate}/>
       </View>
 
     </SafeAreaView>
