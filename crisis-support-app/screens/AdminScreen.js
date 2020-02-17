@@ -52,6 +52,10 @@ export default function AdminScreen({ navigation }) {
             <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
           </View>
 
+          <View style={styles.rectangularButton}>
+            <NavigationButton title="Kiosk Manual" navigationOption={'Manual'} navigateFunction={navigation.navigate}/>
+          </View>
+
       <View style={styles.bottomBarContainer}>
         <Text style={styles.bottomBarInfoText}>
           This is a bar that constantly stays at the bottom!
