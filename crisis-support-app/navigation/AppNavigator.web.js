@@ -15,7 +15,6 @@ const switchNavigator = createSwitchNavigator({
   Opening: OpeningNavigator,
   Visitor: VisitorNavigator,
   Admin: AdminNavigator,
-  AdminPin: pinNavigator,
 },
 {
   initialRouteName: 'Opening',

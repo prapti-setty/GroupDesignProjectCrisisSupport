@@ -15,7 +15,6 @@ export default createAppContainer(
     Opening: OpeningNavigator,
     Visitor: VisitorNavigator,
     Admin: AdminNavigator,
-    AdminPin: pinNavigator,
   },
   {
     initialRouteName: 'Opening',

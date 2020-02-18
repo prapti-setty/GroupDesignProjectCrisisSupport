@@ -30,7 +30,7 @@ export default function OpeningScreen({ navigation }) {
         </View>
 
         <View style={styles.rectangularButton}>
-          <NavigationButton title="Trocaire Staff And Partners" navigationOption={'AdminPin'} navigateFunction={navigation.navigate}/>
+          <NavigationButton title="Trocaire Staff And Partners" navigationOption={'Admin'} navigateFunction={navigation.navigate}/>
         </View>
         <View style={styles.rectangularButton}>
           <NavigationButton title="Community Help and Feedback" navigationOption={'Visitor'} navigateFunction={navigation.navigate}/>

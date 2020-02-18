@@ -1,11 +1,8 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import SettingsScreen from '../screens/SettingsScreen';
 import AdminScreen from '../screens/AdminScreen';
-import LinksScreen from '../screens/LinksScreen';
-import FormTest from '../screens/FormTest';
-
+import AdminPin from '../screens/AdminPin';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -20,9 +17,18 @@ const Admin = {
   }),
 };
 
+const Pin = {
+  screen: AdminPin,
+  path: '',
+  navigationOptions: ({navigation}) => ({
+    title: 'AdminPin'
+  }),
+};
+
 const adminNavigator = createStackNavigator({
-    Admin: Admin,
-  }, {initialRouteName: 'Admin'},
+  Pin: Pin,  
+  Admin: Admin,
+  }, {initialRouteName: 'Pin'},
 );
 
 export default adminNavigator;
