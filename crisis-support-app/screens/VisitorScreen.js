@@ -17,7 +17,6 @@ import { MonoText, PinEntry, NavigationButton } from '_atoms';
 export default function VisitorScreen({ navigation }) {
 
   return (
-    <SafeAreaView>
       <View style={styles.container}>
         <PinEntry/>
         <ScrollView
@@ -43,7 +42,7 @@ export default function VisitorScreen({ navigation }) {
               <Text style={styles.helpLinkText}>
                 Help, it didn’t automatically reload!
               </Text>
-              
+
             </TouchableOpacity>
           </View>
 
@@ -56,7 +55,6 @@ export default function VisitorScreen({ navigation }) {
         <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
       </View>
 
-    </SafeAreaView>
   );
 }
 
