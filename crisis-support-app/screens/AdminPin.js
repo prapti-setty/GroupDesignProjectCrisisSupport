@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
     color: 'rgba(0,0,0,0.4)',
     fontSize: 14,
     lineHeight: 19,
+    alignItems: 'center',
     textAlign: 'center',
   },
   contentContainer: {
