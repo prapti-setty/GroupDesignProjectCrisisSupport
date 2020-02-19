@@ -49,7 +49,7 @@ export default function AdminScreen({ navigation }) {
           </View>
 
           <View style={styles.rectangularButton}>
-            <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
+             <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
           </View>
 
           <View style={styles.rectangularButton}>
