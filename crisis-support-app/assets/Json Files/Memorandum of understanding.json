@@ -1,0 +1,37 @@
+[
+  {
+    "id": "",
+    "h1": "Memorandum of understanding",
+    "input": ""
+  },
+  {
+    "id": 1,
+    "h1": "Location",
+    "input": "text entry"
+  },
+  {
+    "id": 2,
+    "h1": "Name of organization facilitating information kiosk model",
+    "input": "text entry"
+  },
+  {
+    "id": 3,
+    "h1": "Name of organisation/institution supporting information kiosk model",
+    "input": "text entry"
+  },
+  {
+    "id": 4,
+    "h1": "Name of organisation/institution supporting information kiosk model",
+    "input": "text entry"
+  },
+  {
+    "id": 5,
+    "h1": "Start date",
+    "input": "date entry"
+  },
+  {
+    "id": 6,
+    "h1": "End date",
+    "input": "date entry"
+  }
+]

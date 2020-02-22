@@ -1,0 +1,38 @@
+[
+  {
+    "id": "0",
+    "h1": "Information Sharing",
+    "h2": "Sector/Activity",
+    "input": ""
+  },
+  {
+    "id": 1,
+    "h1": "What",
+    "h2": "What information is to be shared",
+    "input": "text entry"
+  },
+  {
+    "id": 2,
+    "h1": "Who",
+    "h2": "Who is responsible for providing the information",
+    "input": "text entry"
+  },
+  {
+    "id": 3,
+    "h1": "How",
+    "h2": "What format will be used for sharing information (email,excel phone, graphs,etc.)",
+    "input": "text entry"
+  },
+  {
+    "id": 4,
+    "h1": "Where",
+    "h2": "Locations of where information will be relevant for",
+    "input": "text entry"
+  },
+  {
+    "id": 5,
+    "h1": "When",
+    "h2": "Frequency for information to be shared",
+    "input": "text entry"
+  }
+]

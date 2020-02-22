@@ -1,0 +1,72 @@
+[
+  {
+    "id": "0",
+    "h1": "Question",
+    "input": ""
+  },
+  {
+    "id": 1,
+    "h1": "1. Have you or any other agency carried out a rapid needs assessment to determine the information needs for the particular emergency?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 2,
+    "h1": "2. Are you and your partner organisations the best actors to deliver this intervention, and are you sure that no other actor, such as local government, has the capacity to deliver such an intervention or is better placed to do so?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 3,
+    "h1": "3. Do you or partner organisations have previous experience working in the local context?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 4,
+    "h1": "4. Do you or partner organisations have previous experience implementing information kiosks or similar information interventions (such as complaint handling and feedback mechanisms)?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 5,
+    "h1": "5. Do you or partner organisations have a proven record of strong co-ordination and communication skills that is recognised by other stakeholders?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 6,
+    "h1": "6. Do you or partner organisations have a pre-existing MOU with government co-ordination agencies and/or referral agencies for implementing information interventions during emergencies?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 7,
+    "h1": "7. Do you or partner organisations form part of a communications or information pillar/cluster group/platform?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 8,
+    "h1": "8. Have you or partner organisations engaged other actors, including government, international aid agencies, and local civil society organisations, to learn their opinions regarding the delivery of the information kiosk model?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 9,
+    "h1": "9. Have these actors expressed their approval of your organisation/partners to implement the information kiosk model?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 10,
+    "h1": "10. Do you or your partner organisations have access to the contact information of humanitarian actors linked to the response?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 11,
+    "h1": "11. Are your staff and partners available for training, as well as the development, implementation, and management of the kiosks, or will you be able to recruit a team in a timely manner?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 12,
+    "h1": "12. Do you have adequate funding to support the staffing, equipment, and material costs of such an intervention over the course of the anticipated implementation period2?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 13,
+    "h1": "13. Do you have staff in place to oversee, monitor and support improvements to the information kiosk model throughout the intervention?",
+    "input": "Yes/No entry"
+  }
+]
