@@ -2,6 +2,7 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { SettingsScreen, VisitorScreen, LinksScreen, FormTest } from '_screens';
+import { ComplaintFormScreen } from '_visitorScreens';
 
 
 const config = Platform.select({
@@ -17,8 +18,17 @@ const Visitor = {
   }),
 };
 
+const ComplaintForm = {
+  screen: ComplaintFormScreen,
+  path: '',
+  navigationOptions: ({navigation}) => ({
+    title: 'ComplaintForm'
+  }),
+};
+
 const visitorNavigator = createStackNavigator({
     Visitor: Visitor,
+    ComplaintForm: ComplaintForm,
   }, {initialRouteName: 'Visitor'},
 );
 
