@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { View,ScrollView, Text, StyleSheet, TextInput, Button,Picker} from "react-native";
-import { Colors } from '../../constants/Colors';
+import { Colors } from '_constants';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 export default class Form extends Component{
 
