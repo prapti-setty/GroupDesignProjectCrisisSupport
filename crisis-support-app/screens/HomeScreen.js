@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import { MonoText, PinEntry, NavigationButton } from '_atoms';
-
+import { Colors } from '_constants';
 
 export default function HomeScreen({ navigation }) {
 
@@ -50,7 +50,7 @@ export default function HomeScreen({ navigation }) {
               <Text style={styles.helpLinkText}>
                 Help, it didn’t automatically reload!
               </Text>
-              
+
             </TouchableOpacity>
           </View>
 
@@ -126,11 +126,11 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
   },
   developmentModeText: {
     marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
+    color: Colors.developmentModeTextColor,
     fontSize: 14,
     lineHeight: 19,
     textAlign: 'center',
@@ -158,16 +158,16 @@ const styles = StyleSheet.create({
     marginVertical: 7,
   },
   codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
+    color: Colors.codeHighlightTextColor,
   },
   codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
+    backgroundColor: Colors.codeHighlightContainerColor,
     borderRadius: 3,
     paddingHorizontal: 4,
   },
   getStartedText: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    color: Colors.infoTextColor,
     lineHeight: 24,
     textAlign: 'center',
   },
@@ -188,12 +188,12 @@ const styles = StyleSheet.create({
       },
     }),
     alignItems: 'center',
-    backgroundColor: '#fbfbfb',
+    backgroundColor: Colors.bottomBarContainerColor,
     paddingVertical: 20,
   },
   tabBarInfoText: {
     fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
+    color: Colors.infoTextColor,
     textAlign: 'center',
   },
   navigationFilename: {
@@ -208,7 +208,7 @@ const styles = StyleSheet.create({
   },
   helpLinkText: {
     fontSize: 14,
-    color: '#2e78b7',
+    color: Colors.linkTextColor,
   },
   rectangularButton: {
     paddingLeft: '40%',

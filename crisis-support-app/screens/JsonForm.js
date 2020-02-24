@@ -6,6 +6,8 @@ import Form from '../components/atoms/Form';
 import form0 from  '../assets/Json Files/Memorandum of understanding.json';
 import form1 from  '../assets/Json Files/Implementation Checklist.json';
 import form2 from  '../assets/Json Files/Information Sharing.json';
+import { Colors } from '_constants';
+
 export default class JsonForm extends Component {
 
   constructor(props) {
@@ -40,6 +42,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 10,
-    backgroundColor: '#0000FF',
+    backgroundColor:Colors.jsonFormBackgroundColor,
   },
 });
