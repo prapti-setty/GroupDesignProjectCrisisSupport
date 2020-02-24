@@ -1,10 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import SettingsScreen from '../screens/SettingsScreen';
-import VisitorScreen from '../screens/VisitorScreen';
-import LinksScreen from '../screens/LinksScreen';
-import FormTest from '../screens/FormTest';
+import { SettingsScreen, VisitorScreen, LinksScreen, FormTest } from '_screens';
 
 
 const config = Platform.select({
