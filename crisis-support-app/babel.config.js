@@ -17,6 +17,9 @@ module.exports = function(api) {
             _organisms: "./components/organisms",
             _navigation: "./navigation",
             _screens: "./screens",
+            _adminScreens: "./screens/adminScreens",
+            _visitorScreens: "./screens/visitorScreens",
+            _rootScreens: "./screens/rootScreens",
             _constants: "./constants",
           }
         }
