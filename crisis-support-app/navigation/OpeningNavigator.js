@@ -1,10 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import OpeningScreen from '../screens/OpeningScreen';
-import AdminPin from '../screens/AdminPin';
-import VisitorScreen from '../screens/VisitorScreen';
-
+import { OpeningScreen, AdminPin, VisitorScreen } from '_screens';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
