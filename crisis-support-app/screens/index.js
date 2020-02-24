@@ -7,3 +7,4 @@ export { default as LinksScreen } from './LinksScreen.js';
 export { default as OpeningScreen } from './OpeningScreen.js';
 export { default as SettingsScreen } from './SettingsScreen.js';
 export { default as VisitorScreen } from './VisitorScreen.js';
+export { default as ManualScreen } from './ManualScreen.js';

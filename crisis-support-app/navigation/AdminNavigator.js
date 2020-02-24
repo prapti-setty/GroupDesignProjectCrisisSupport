@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import { AdminScreen, AdminPin } from '_screens';
+import { AdminScreen, AdminPin , SettingsScreen , LinksScreen, FormTest, ManualScreen} from '_screens';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -24,9 +24,45 @@ const Pin = {
   }),
 };
 
+const Links = {
+  screen:LinksScreen,
+  path:'',
+  navigationOptions:({navigation}) => ({
+    title:'Links'
+  }),
+};
+
+const Settings = {
+  screen:SettingsScreen,
+  path:'',
+  navigationOptions:({navigation}) => ({
+    title:'Settings'
+  }),
+};
+
+const Manual = {
+  screen:ManualScreen,
+  path:'',
+  navigationOptions:({navigation}) => ({
+    title:'Manual'
+  }),
+};
+
+const Form = {
+  screen:FormTest,
+  path:'',
+  navigationOptions:({navigation}) => ({
+    title:'Form'
+  }),
+};
+
 const adminNavigator = createStackNavigator({
-  Pin: Pin,  
+  Pin: Pin,
   Admin: Admin,
+  Links: Links,
+  Settings: Settings,
+  Manual: Manual,
+  Form: Form,
   }, {initialRouteName: 'Pin'},
 );
 

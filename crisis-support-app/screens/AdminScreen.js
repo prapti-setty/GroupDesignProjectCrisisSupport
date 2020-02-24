@@ -30,6 +30,9 @@ export default function AdminScreen({ navigation }) {
         </View>
         <View style={styles.alignCenter}>
             <View style={styles.rectangularButton}>
+                <NavigationButton title="Kiosk Guidebook" navigationOption={'Manual'} navigateFunction={navigation.navigate}/>
+            </View>
+            <View style={styles.rectangularButton}>
                 <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
             </View>
             <View style={styles.rectangularButton}>

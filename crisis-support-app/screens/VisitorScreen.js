@@ -47,6 +47,7 @@ export default function VisitorScreen({ navigation }) {
           </View>
 
         </ScrollView>
+        <NavigationButton title="Kiosk Guidebook" navigationOption={'Manual'} navigateFunction={navigation.navigate}/>
         <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
         <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
         <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
