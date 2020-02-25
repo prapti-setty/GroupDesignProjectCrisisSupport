@@ -32,6 +32,7 @@ export default class PinEntry extends Component {
     return (
         <View style={styles.textBox}>
           <TextInput
+              secureTextEntry={true}
               placeholder={this.state.placeholder}
               keyboardType={this.state.keyboardtype}
               secureTextEntry={this.state.hideText}
@@ -56,10 +57,6 @@ export default class PinEntry extends Component {
               style={{borderWidth: 1, borderStyle: 'solid', height:30,}}
               returnKeyType={'done'}
           />
-
-          {/*<View style={{alignItems: 'center', justifyContent: 'center',}}>*/}
-          {/*  <Text>user input: {this.state.ourText}</Text>*/}
-          {/*</View>*/}
         </View>
     );
   }
