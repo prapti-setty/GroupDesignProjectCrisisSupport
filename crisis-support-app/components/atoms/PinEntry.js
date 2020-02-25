@@ -6,6 +6,7 @@ export default class PinEntry extends Component {
     super(props);
     this.state = {
         result: '',
+        text: '',
         ourText: '',
         placeholder: "",
         pinCode: "",
@@ -28,25 +29,32 @@ export default class PinEntry extends Component {
       });
   }
 
+  clearText(){
+    this.setState({text:''})
+  }
+
+
   render(){
     return (
         <View style={styles.textBox}>
           <TextInput
-              secureTextEntry={true}
               placeholder={this.state.placeholder}
               keyboardType={this.state.keyboardtype}
               secureTextEntry={this.state.hideText}
+              onChangeText={(text) => this.setState({text})}
+              value={this.state.text}
               onSubmitEditing={
               ({ nativeEvent }) => { this.setState({ result: nativeEvent.text });
-                  if(nativeEvent.text.toString() == this.props.pinCode && this.state.submitFunction == 'pin')
+                  if(this.state.text == this.props.pinCode && this.state.submitFunction == 'pin')
                   {
                       this.state.navigate(this.state.navigationOption);
-                      this.setState({ourText: 'good'})
+                      this.setState({ourText: 'good'});
+                      this.clearText();
                   }
                   else if(this.state.submitFunction == 'pin')
                   {
-                      this.setState({ourText: 'bad'})
-
+                      this.setState({ourText: 'bad'});
+                      this.clearText();
                   }
                   else
                   {
@@ -54,8 +62,8 @@ export default class PinEntry extends Component {
                   }
                 }
             }
-              style={{borderWidth: 1, borderStyle: 'solid', height:30,}}
-              returnKeyType={'done'}
+            style={{borderWidth: 1, borderStyle: 'solid', height:30,}}
+            returnKeyType={'done'}
           />
         </View>
     );
