@@ -67,7 +67,8 @@ export default class PinEntry extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
+    marginVertical:50,
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center'
