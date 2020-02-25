@@ -11,7 +11,7 @@ import {
   SafeAreaView,
 } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-import { MonoText, PinEntry, NavigationButton } from '_atoms';
+import { MonoText, LightFontText, CondensedFontText, PinEntry, NavigationButton } from '_atoms';
 
 
 export default function VisitorScreen({ navigation }) {

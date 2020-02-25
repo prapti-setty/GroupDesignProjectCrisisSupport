@@ -28,6 +28,7 @@ export default class NavigationButton extends Component {
     return (
           <Button
             title={this.state.title}
+            textStyle={{fontFamily:'univers-condensed'}}
             onPress={() => this.state.navigate(this.state.navigationOption)}
             color={'rgba(0, 133, 202, 1)'}
           />

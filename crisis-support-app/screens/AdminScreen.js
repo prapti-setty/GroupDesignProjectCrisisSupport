@@ -28,7 +28,7 @@ export default function AdminScreen({ navigation }) {
             style={styles.welcomeImage}
           />
         </View>
-        <View style={styles.alignCenter}>
+        <ScrollView style={styles.alignCenter}>
             <View style={styles.rectangularButton}>
                 <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
             </View>
@@ -51,7 +51,7 @@ export default function AdminScreen({ navigation }) {
             <View style={styles.rectangularButton}>
                 <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
             </View>
-        </View>
+        </ScrollView>
 
       <View style={styles.bottomBarContainer}>
         <Text style={styles.bottomBarInfoText}>
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     paddingTop: 30,
   },
   alignCenter: {
-    alignContent: 'center'
+    alignContent: 'center',
   },
   welcomeContainer: {
     alignItems: 'center',

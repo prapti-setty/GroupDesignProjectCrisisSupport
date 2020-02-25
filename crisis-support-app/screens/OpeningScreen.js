@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { MonoText, PinEntry, NavigationButton } from '_atoms';
+import { MonoText, LightFontText, CondensedFontText, PinEntry, NavigationButton } from '_atoms';
 
 export default function OpeningScreen({ navigation }) {
   return (

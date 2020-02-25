@@ -13,7 +13,7 @@ import {
   Alert,
 } from 'react-native';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-import { MonoText, PinEntry } from '_atoms';
+import { MonoText, LightFontText, CondensedFontText, PinEntry } from '_atoms';
 
 export default function FormTest() {
   const [[value1,value2,value3,value4,value5,value6,value7,value8,value9,value10,value11,value12,value13], onChangeText] = React.useState('');
