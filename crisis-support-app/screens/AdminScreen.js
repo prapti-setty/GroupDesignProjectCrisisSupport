@@ -33,7 +33,7 @@ export default function AdminScreen({ navigation }) {
                 <NavigationButton title="Kiosk Guidebook" navigationOption={'Manual'} navigateFunction={navigation.navigate}/>
             </View>
             <View style={styles.rectangularButton}>
-                <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
+                <NavigationButton title="Forms" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
             </View>
             <View style={styles.rectangularButton}>
                 <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>

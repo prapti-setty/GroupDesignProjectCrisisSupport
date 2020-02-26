@@ -6,6 +6,8 @@ import Form from '../components/atoms/Form';
 import form0 from  '../assets/Json Files/Memorandum of understanding.json';
 import form1 from  '../assets/Json Files/Implementation Checklist.json';
 import form2 from  '../assets/Json Files/Information Sharing.json';
+import form3 from  '../assets/Json Files/Information Needs Assessment.json';
+
 import { Colors } from '_constants';
 
 export default class JsonForm extends Component {
@@ -15,7 +17,8 @@ export default class JsonForm extends Component {
     this.state = {
       form0: form0,
       form1: form1,
-      form2: form2};
+      form2: form2,
+      form3: form3};
   }
     render() {
       return(
@@ -31,6 +34,10 @@ export default class JsonForm extends Component {
             <View>
                <Text style = {styles.container}>Information Sharing</Text>
                 <Form data = {this.state.form2}/>
+            </View>
+            <View>
+               <Text style = {styles.container}>Information Needs Assessment</Text>
+                <Form data = {this.state.form3}/>
             </View>
           </ScrollView>
         );

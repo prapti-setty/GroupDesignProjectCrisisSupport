@@ -48,7 +48,7 @@ const Manual = {
   }),
 };
 
-const Form = {
+const Forms = {
   screen:FormTest,
   path:'',
   navigationOptions:({navigation}) => ({
@@ -62,7 +62,7 @@ const adminNavigator = createStackNavigator({
   Links: Links,
   Settings: Settings,
   Manual: Manual,
-  Form: Form,
+  Forms: Forms,
   }, {initialRouteName: 'Pin'},
 );
 

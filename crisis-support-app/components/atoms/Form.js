@@ -8,14 +8,16 @@ export default class Form extends Component{
         super(props);
         this.state = {
           data: props.data,
-          output: "",
+          output: [],
           _update:"",
         }
-        this.updateAnswer = (answer, index) => {
+        this.updateAnswer = (answer,index) => {
           const newArray = [...this.state.output];
-          newArray[index].value = answer;
+          newArray[index] = answer;
           this.setState({ output: newArray });
-}
+          console.log(answer);
+          console.log(index);
+        }
     }
 
   render() {
@@ -32,18 +34,21 @@ export default class Form extends Component{
 
   renderform() {
 
-
+    console.log("re rendered");
     const items = [];
     for (let item of this.state.data) {
+        console.log(this.state.output[item.id]);
         if(item.input === "Yes/No entry")
           items.push(
             <View key = {item.id}>
               <Text style ={styles.heading1}> {item.h1} </Text>
               <Text style ={styles.heading2}> {item.h2} </Text>
-                  <Picker selectedValue = {this.state.output} onChange = {(value) => this.updateAnswer(value,item.id)}>
+              <Picker selectedValue = {this.state[item.id]}
+                onValueChange={(itemValue, itemIndex) => this.updateAnswer(itemValue,item.id)}>
                     <Picker.Item label = "Yes" value = "yes" />
                     <Picker.Item label = "No" value = "no" />
-                    </Picker>
+                    <Picker.Item label = "N/A" value = "n/a" />
+                  </Picker>
             </View>
           );
         else if (item.input ==="text entry")
@@ -51,7 +56,8 @@ export default class Form extends Component{
             <View key = {item.id}>
               <Text style ={styles.heading1}> {item.h1} </Text>
               <Text style ={styles.heading2}> {item.h2} </Text>
-              <TextInput style={styles.input} value = {this.state.output[item.id]}/>
+              <TextInput style={styles.input} value = {this.state.output[item.id]}
+                onChangeText={text => this.updateAnswer(text,item.id) }/>
             </View>
           );
           else if (item.input ==="date entry")
@@ -59,9 +65,19 @@ export default class Form extends Component{
               <View key = {item.id}>
                 <Text style ={styles.heading1}> {item.h1} </Text>
                 <Text style ={styles.heading2}> {item.h2} </Text>
-                <TextInput style={styles.input} value = {this.state.output[item.id]} keyboardType ="number-pad"/>
+                <TextInput style={styles.input} value = {this.state.output[item.id]} keyboardType ="number-pad"
+                onChangeText={text => this.updateAnswer(text,item.id)}/>
               </View>
             );
+          else if (item.input ==="number entry")
+              items.push(
+                <View key = {item.id}>
+                  <Text style ={styles.heading1}> {item.h1} </Text>
+                  <Text style ={styles.heading2}> {item.h2} </Text>
+                  <TextInput style={styles.input} value = {this.state.output[item.id]} keyboardType ="number-pad"
+                    onChangeText={text => this.updateAnswer(text,item.id)}/>
+                </View>
+              );
         else
         items.push(
           <View key = {item.id}>
