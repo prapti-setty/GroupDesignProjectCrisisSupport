@@ -8,6 +8,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  SafeAreaView
 } from 'react-native';
 import { MonoText, PinEntry, NavigationButton } from '_atoms';
 import { Colors } from '_constants';

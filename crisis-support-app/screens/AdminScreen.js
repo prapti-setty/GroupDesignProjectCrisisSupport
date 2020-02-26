@@ -15,7 +15,6 @@ import { MonoText, PinEntry, NavigationButton } from '_atoms';
 import { Colors } from '_constants';
 
 export default function AdminScreen({ navigation }) {
-
   return (
     <View style={styles.container}>
         <View style={styles.welcomeContainer}>
@@ -27,8 +26,8 @@ export default function AdminScreen({ navigation }) {
             }
             style={styles.welcomeImage}
           />
-        </View>
-        <View style={styles.alignCenter}>
+    </View>
+        <ScrollView style={styles.alignCenter}>
             <View style={styles.rectangularButton}>
                 <NavigationButton title="Kiosk Guidebook" navigationOption={'Manual'} navigateFunction={navigation.navigate}/>
             </View>
@@ -54,7 +53,7 @@ export default function AdminScreen({ navigation }) {
             <View style={styles.rectangularButton}>
                 <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
             </View>
-        </View>
+        </ScrollView>
 
       <View style={styles.bottomBarContainer}>
         <Text style={styles.bottomBarInfoText}>
