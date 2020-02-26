@@ -26,10 +26,6 @@ export default function OpeningScreen({ navigation }) {
           />
         </View>
 
-        <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
-        </View>
-
         <View style={styles.rectangularButton}>
           <NavigationButton title="Trocaire Staff And Partners" navigationOption={'Admin'} navigateFunction={navigation.navigate}/>
         </View>

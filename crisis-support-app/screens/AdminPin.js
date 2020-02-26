@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     marginVertical: 7,
   },
   codeHighlightText: {
-    color: Colors.codeHighlightTextColor,
+    color: 'red',
   },
   codeHighlightContainer: {
     backgroundColor: Colors.codeHighlightContainerColor,
