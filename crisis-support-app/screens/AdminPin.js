@@ -27,7 +27,7 @@ export default function AdminPin({ navigation }) {
         </View>
 
         <View style={styles.developmentModeText}>
-            <Text style={styles.codeHighlightText}>
+            <Text style={styles.lockedScreenText}>
                 Area Locked. Please enter Admin PIN to access.
             </Text>
         </View>
@@ -137,6 +137,10 @@ const styles = StyleSheet.create({
   codeHighlightText: {
     color: 'red',
   },
+  lockedScreenText: {
+    color: 'red',
+    fontFamily: 'Univers-Light-Normal'
+  },
   codeHighlightContainer: {
     backgroundColor: Colors.codeHighlightContainerColor,
     borderRadius: 3,
@@ -172,6 +176,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: Colors.infoTextColor,
     textAlign: 'center',
+    fontFamily: 'Univers-Light-Normal'
   },
   navigationFilename: {
     marginTop: 5,

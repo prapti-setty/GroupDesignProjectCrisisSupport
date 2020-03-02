@@ -50,6 +50,12 @@ export default function VisitorScreen({ navigation }) {
                 <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
             </View>
         </ScrollView>
+
+        <View style={styles.bottomBarContainer}>
+            <Text style={styles.bottomBarInfoText}>
+                This is a bar that constantly stays at the bottom!
+            </Text>
+        </View>
     </View>
 
   );
@@ -179,6 +185,7 @@ const styles = StyleSheet.create({
       fontSize: 17,
       color: Colors.infoTextColor,
       textAlign: 'center',
+      fontFamily: 'Univers-Light-Normal'
     },
     navigationFilename: {
       marginTop: 5,

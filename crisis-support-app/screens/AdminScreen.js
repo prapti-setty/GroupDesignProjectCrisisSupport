@@ -188,6 +188,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     color: Colors.infoTextColor,
     textAlign: 'center',
+    fontFamily: 'Univers-Light-Normal'
   },
   navigationFilename: {
     marginTop: 5,

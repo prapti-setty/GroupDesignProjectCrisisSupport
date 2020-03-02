@@ -1,19 +1,28 @@
 import React, {Component} from 'react';
 import {
   StyleSheet,
-  Button,
   View,
-  SafeAreaView,
   Text,
-  Alert,
+  TouchableOpacity,
+  Dimensions
 } from 'react-native';
 import Constants from 'expo-constants';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
+function fontSizer(screenWidth) {
+  if(screenWidth > 1000){
+    return 30;
+  }else if(screenWidth > 500){
+    return 25;
+  }else if(screenWidth < 500){
+    return 20;
+  }
+}
+
 export default class NavigationButton extends Component {
   constructor (props) {
     super(props);
-    this.state = { title: '',  navigationOption: {defaultFunc}, navigateFunction: {}};
+    this.state = { title: '',  navigationOption: {defaultFunc}, navigateFunction: {}, width: 0};
   }
 
   componentDidMount() {
@@ -21,16 +30,23 @@ export default class NavigationButton extends Component {
           title: this.props.title,
           navigationOption: this.props.navigationOption,
           navigate: this.props.navigateFunction,
+          width: fontSizer(Dimensions.get('window').width)
       });
   }
 
   render() {
     return (
-          <Button
-            title={this.state.title}
-            onPress={() => this.state.navigate(this.state.navigationOption)}
-            color={'rgba(0, 133, 202, 1)'}
-          />
+          <TouchableOpacity onPress={() => this.state.navigate(this.state.navigationOption)}>
+            <View style={styles.button}>
+              <Text style={
+                {fontFamily: 'Univers-Condensed',
+                 fontSize: fontSizer(this.state.width),
+                 color: 'white',
+                 textAlign: 'center'}}>
+                    {this.state.title}
+              </Text>
+            </View>
+          </TouchableOpacity>
     );
   }
 }
@@ -52,5 +68,11 @@ const styles = StyleSheet.create({
   fixToText: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#0085ca',
+    paddingTop: '5%',
+    paddingBottom: '5%',
   },
 });
