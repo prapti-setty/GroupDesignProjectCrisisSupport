@@ -32,22 +32,16 @@ export default function VisitorScreen({ navigation }) {
                 <NavigationButton title="Kiosk Guidebook" navigationOption={'Manual'} navigateFunction={navigation.navigate}/>
             </View>
             <View style = {styles.rectangularButton}>
-                <NavigationButton title="Forms (Broken)" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
+                <NavigationButton title="Forms" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
+            </View>
+            <View style = {styles.rectangularButton}>
+                <NavigationButton title="Complaints" navigationOption={'ComplaintForm'} navigateFunction={navigation.navigate}/>
             </View>
             <View style = {styles.rectangularButton}>
                 <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
             </View>
             <View style = {styles.rectangularButton}>
                 <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
-            </View>
-            <View style = {styles.rectangularButton}>
-                <NavigationButton title="Complaints" navigationOption={'ComplaintForm'} navigateFunction={navigation.navigate}/>
-            </View>
-            <View style = {styles.rectangularButton}>
-                <NavigationButton title="General Information (Not done)" navigationOption={'General_Info'} navigateFunction={navigation.navigate}/>
-            </View>
-            <View style = {styles.rectangularButton}>
-                <NavigationButton title="Resources (Not done)" navigationOption={'Resources'} navigateFunction={navigation.navigate}/>
             </View>
         </ScrollView>
 
