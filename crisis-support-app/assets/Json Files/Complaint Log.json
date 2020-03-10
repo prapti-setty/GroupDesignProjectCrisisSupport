@@ -1,0 +1,68 @@
+[
+  {
+    "id": 0,
+    "h1": "No.",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 1,
+    "h1": "Date",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 2,
+    "h1": "Complaint's Name & Address",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 3,
+    "h1": "M/F",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 4,
+    "h1": "Age",
+    "h2": "(<18;18-60;60+)",
+    "input": "text entry"
+  },
+  {
+    "id": 5,
+    "h1": "Nature of complaint",
+    "h2": "Water, Stanitation and Hygiene \\n Shelter \\n Health \\n Food \\n Education \\n social mobilisation & communication \\n Abuse & exploitation, Sexual Abuse \\n Fraud \\n Polical Interference \\n General",
+    "input": "text entry"
+  },
+  {
+    "id": 6,
+    "h1": "Details of complaint",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 7,
+    "h1": "Complaint Forwarded to",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 8,
+    "h1": "Actions Taken",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 9,
+    "h1": "Complaint Response/Feedback",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 10,
+    "h1": "Staff Name",
+    "h2": "",
+    "input": "text entry"
+  }
+]

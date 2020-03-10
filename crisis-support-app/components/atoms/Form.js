@@ -51,6 +51,7 @@ export default class Form extends Component{
         }
         this.handleEmail = (subject,recipient,body) => {
           const to = recipient // string or array of email addresses
+          const answer = body.toString();
           email(to, {
             subject: this.subject,
             body: body.toString()
