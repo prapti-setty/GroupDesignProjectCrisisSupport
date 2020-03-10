@@ -1,0 +1,224 @@
+[
+  {
+    "id": 0,
+    "h1": "position",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 1,
+    "h1": "ref",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 2,
+    "h1": "Successful candidate",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 3,
+    "h1": "Activity",
+    "h2": "considerations",
+    "input": ""
+  },
+  {
+    "id": 4,
+    "h1": "Job analysis \nHiring \nAuthorisation Form",
+    "h2": "a) Police Vetting Risk Assessment \nb) Level of access to vulnerable groups \nc) Level of responsibility to implement safeguarding and Complaints Follow-up",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 5,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 6,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 7,
+    "h1": "Job Advert",
+    "h2": "a) Has a line on Safeguarding (and Code of Conduct) been included in the advert",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 8,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 9,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 10,
+    "h1": "Job Description",
+    "h2": "a) As a minimum has a line on safeguarding and code of conduct been included in the Job Description \nb) Has the job description reflected responsibilities specific to safeguarding implementation \nc) Is the level of contact with vulnerable people clearly defined",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 11,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 12,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 13,
+    "h1": "Interview/Questions",
+    "h2": "a) Have questions (relevant to the role) on Safeguarding been included in order to establish the candidates understanding and attitudes to safeguarding",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 14,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 15,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 16,
+    "h1": "Interview/Closing",
+    "h2": "a) Has the candidate been reminded of our policies and that she/ he will be expected to sign and commit to these \nb) Has the candidate been informed and confirmed their permission in relation to safeguarding as part of reference checks (i.e. suitability to work with vulnerable groups) \nc) Where relevant has the candidate been reminded of Garda/Police vetting",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 17,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 18,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 19,
+    "h1": "References",
+    "h2": "a) 2 reference received \nb) Has the referees identify been confirmed (through organisation, organisation e-mail) \nc) Has relevant questions on Safeguarding been included as part of reference checks",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 20,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 21,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 22,
+    "h1": "Checking identity and other items",
+    "h2": "a) Have you asked to see the successful candidates original photo ID (Passport or Driver’s License) \nb) Have you asked to see relevant certificates of qualifications",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 23,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 24,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 25,
+    "h1": "Police Vetting",
+    "h2": "a) Is vetting required for this role? Has this been processed?",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 26,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 27,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 28,
+    "h1": "Signing Declaration Forms",
+    "h2": "a) Received signed Self-Declaration Form Declaration Forms",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 29,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 30,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 31,
+    "h1": "Signing code of Conduct",
+    "h2": "a) Received signed Code of Conduct",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 32,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 33,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  },
+  {
+    "id": 34,
+    "h1": "Training",
+    "h2": "a) Has the candidate been enrolled for induction on the Code of Conduct and Safeguarding Policies in week 1",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 35,
+    "h1": "Signature",
+    "h2": "",
+    "input": "text entry"
+  },
+  {
+    "id": 36,
+    "h1": "Date",
+    "h2": "",
+    "input": "date entry"
+  }
+]

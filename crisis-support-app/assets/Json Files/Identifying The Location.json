@@ -1,0 +1,57 @@
+[
+  {
+    "id": 0,
+    "h1": "Consider the following when identifying the location of your information kiosks:",
+    "input": "text entry"
+  },
+  {
+    "id": 1,
+    "h1": "1. Accessibility for different groups (elderly, disabled, women, men etc...); what cultural factors should be considered?",
+    "input": "text entry"
+  },
+  {
+    "id": 2,
+    "h1": "2. Is it safe? Structurally and culturally so that different groups will feel safe and comfortable visiting the kiosk",
+    "input": "text entry"
+  },
+  {
+    "id": 3,
+    "h1": "3. Visibility – can people see the information kiosk from the street or is it hidden?",
+    "input": "text entry"
+  },
+  {
+    "id": 4,
+    "h1": "4. Traffic and noise volumes – will this affect the service at the kiosk?",
+    "input": "text entry"
+  },
+  {
+    "id": 5,
+    "h1": "5. Availability of an existing structure that can be used? Can you rent or is construction of a structure required?",
+    "input": "text entry"
+  },
+  {
+    "id": 6,
+    "h1": "6. Access to electricity and water – is this needed? If so what measures can be put in place if not available?",
+    "input": "text entry"
+  },
+  {
+    "id": 7,
+    "h1": "7. Assess the building for ease of access, and flow of people in and out of the kiosk",
+    "input": "text entry"
+  },
+  {
+    "id": 8,
+    "h1": "8. Time required to secure and set up at the identified location - Will this delay your implementation?",
+    "input": "text entry"
+  },
+  {
+    "id": 9,
+    "h1": "9. Balance cost of kiosk vs location and access",
+    "input": "text entry"
+  },
+  {
+    "id": 10,
+    "h1": "10. Scope out what other businesses, community services etc... are in the area and if the location is appropriate",
+    "input": "text entry"
+  }
+]
