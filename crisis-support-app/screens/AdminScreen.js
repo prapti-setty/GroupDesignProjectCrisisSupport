@@ -17,16 +17,16 @@ import { Colors } from '_constants';
 export default function AdminScreen({ navigation }) {
   return (
     <View style={styles.container}>
-        <View style={styles.welcomeContainer}>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/trocaire.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
-          />
-    </View>
+     <TouchableOpacity style={styles.welcomeContainer} onPress={() => navigation.navigate('Opening')}>
+       <Image
+         source={
+          __DEV__
+          ? require('../assets/images/trocaire.png')
+          : require('../assets/images/robot-prod.png')
+        }
+        style={styles.welcomeImage}
+      />
+     </TouchableOpacity>
         <ScrollView style={styles.alignCenter}>
             <View style={styles.rectangularButton}>
                 <NavigationButton title="Kiosk Guidebook" navigationOption={'Manual'} navigateFunction={navigation.navigate}/>

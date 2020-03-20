@@ -15,18 +15,18 @@ import { Colors } from '_constants';
 export default function AdminPin({ navigation }) {
   return (
     <View style={styles.container}>
-        <View style={styles.welcomeContainer}>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/trocaire.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
-          />
-        </View>
+      <TouchableOpacity style={styles.welcomeContainer} onPress={() => navigation.navigate('Opening')}>
+       <Image
+         source={
+          __DEV__
+          ? require('../assets/images/trocaire.png')
+          : require('../assets/images/robot-prod.png')
+        }
+        style={styles.welcomeImage}
+      />
+     </TouchableOpacity>
 
-        <View style={styles.developmentModeText}>
+        <View style={styles.notice}>
             <Text style={styles.lockedScreenText}>
                 Area Locked. Please enter Admin PIN to access.
             </Text>
@@ -101,6 +101,10 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     alignItems: 'center',
     textAlign: 'center',
+  },
+  notice: {
+    marginBottom: 20,
+    alignItems: 'center',
   },
   contentContainer: {
     paddingTop: 30,

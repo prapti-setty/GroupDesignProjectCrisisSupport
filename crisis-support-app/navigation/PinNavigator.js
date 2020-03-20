@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
-import { AdminPin, AdminScreen } from '_screens';
+import { AdminPin, AdminScreen, OpeningScreen } from '_screens';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -24,8 +24,17 @@ const Admin = {
   }),
 };
 
+const Opening = {
+  screen: OpeningScreen,
+  path:'',
+  navigationOptions:({navigation}) => ({
+    title:'Opening'
+  }),
+};
+
 const pinNavigator = createStackNavigator({
   Pin: Pin,
+  Opening: Opening,
 }, {initialRouteName: 'Pin'},
 );
 
