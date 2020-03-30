@@ -45,7 +45,7 @@ const Manual = {
   screen:ManualScreen,
   path:'',
   navigationOptions:({navigation}) => ({
-    title:'Kisok Guidebook'
+    title:'Kiosk Guidebook'
   }),
 };
 

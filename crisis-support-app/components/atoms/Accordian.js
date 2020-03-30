@@ -24,7 +24,10 @@ export default class Accordian extends Component{
             {
                 this.state.expanded &&
                 <View style={styles.child} >
-                    <Text style={{fontFamily: 'Univers-Light-Normal'}}>{this.props.data}</Text>
+                    <Text style={styles.childText}>{this.props.data}</Text>
+                    <TouchableOpacity style = {styles.button} onPress = {() => this.toggleExpand()}>
+                        <Text style = {styles.buttonText}>Collapse Chapter</Text>
+                    </TouchableOpacity>
                 </View>
             }
        </View>
@@ -63,9 +66,9 @@ const styles = StyleSheet.create({
         borderColor:Colors.trocaireBlue
     },
     childText:{
-        fontSize:15,
-        fontWeight:'bold',
-        paddingBottom:10
+        paddingBottom:10,
+        fontFamily: 'Univers-Light-Normal',
+        fontWeight:'bold'
     },
     button:{
         alignItems:'center',
