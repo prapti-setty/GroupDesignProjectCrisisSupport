@@ -3,6 +3,8 @@ import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { SettingsScreen, VisitorScreen, LinksScreen, FormTest,ManualScreen } from '_screens';
 import { ComplaintFormScreen } from '_visitorScreens';
+import Colors from '../constants/Colors'
+
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -45,7 +47,7 @@ const Manual = {
   screen:ManualScreen,
   path:'',
   navigationOptions:({navigation}) => ({
-    title:'Manual'
+    title:'Kiosk Guidebook'
   }),
 };
 
@@ -59,13 +61,34 @@ const Form = {
 
 
 const visitorNavigator = createStackNavigator({
-    Visitor: Visitor,
-    ComplaintForm: ComplaintForm,
-    Links: Links,
-    Settings: Settings,
-    Manual: Manual,
-    Form: Form,
-  }, {initialRouteName: 'Visitor'},
+        Visitor: Visitor,
+        ComplaintForm: ComplaintForm,
+        Links: Links,
+        Settings: Settings,
+        Manual: Manual,
+        Form: Form,
+    },
+    {
+        initialRouteName: 'Visitor',
+        defaultNavigationOptions: {
+            headerStyle: {
+                backgroundColor: Colors.trocaireBlue,
+                elevation: 5,
+                shadowOpacity: 5
+            },
+            headerTintColor: 'white',
+            headerTitleStyle: {
+                textAlign: 'center',
+                flexGrow: 1,
+                fontSize:24,
+                fontWeight: 'bold',
+                color: 'white',
+            },
+            headerTitleContainerStyle: {
+              left: 0,
+            },
+        }
+    },
 );
 
 

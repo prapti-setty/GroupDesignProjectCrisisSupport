@@ -19,13 +19,15 @@ export default class Accordian extends Component{
        <View>
             <TouchableOpacity style={styles.row} onPress={()=>this.toggleExpand()}>
                 <Text style={[styles.title, styles.font]}>{this.props.title}</Text>
-                <Icon name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'} size={30} color='#e4002b' />
+                <Icon name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'} size={30} color='white' />
             </TouchableOpacity>
-            <View style={styles.parentHr}/>
             {
                 this.state.expanded &&
                 <View style={styles.child} >
-                    <Text>{this.props.data}</Text>
+                    <Text style = {styles.childText}>{this.props.data}</Text>
+                    <TouchableOpacity style = {styles.button} onPress = {() => this.toggleExpand()}>
+                        <Text style = {styles.buttonText}>Collapse Chapter</Text>
+                    </TouchableOpacity>
                 </View>
             }
        </View>
@@ -40,28 +42,43 @@ export default class Accordian extends Component{
 
 const styles = StyleSheet.create({
     title:{
-        fontSize: 14,
+        fontSize: 16,
         fontWeight:'bold',
         color: 'white',
         flex:1,
     },
     row:{
+        borderRadius:5,
         flexDirection: 'row',
         justifyContent:'space-between',
-        height:56,
+        height:60,
         paddingLeft:25,
         paddingRight:18,
         alignItems:'center',
         backgroundColor: Colors.trocaireBlue,
     },
-    parentHr:{
-        height:3,
-        color: 'white',
-        width:'100%'
-    },
     child:{
         backgroundColor: Colors.accordianShade,
-        padding:16,
+        padding:15,
+        borderRadius:5,
+        borderWidth:3,
+        borderColor:Colors.trocaireBlue
+    },
+    childText:{
+        fontSize:15,
+        fontWeight:'bold',
+        paddingBottom:10
+    },
+    button:{
+        alignItems:'center',
+        height:30,
+        borderRadius:5,
+        backgroundColor:Colors.trocaireBlue,
+    },
+    buttonText:{
+        fontSize:14,
+        paddingTop:5,
+        fontWeight:'bold',
+        color:'white'
     }
-
-});
+})
