@@ -1,104 +1,66 @@
-import React from 'react';
-import {Platform, ScrollView, StyleSheet, Linking, Button, View, TouchableOpacity, Image} from 'react-native';
-import { NavigationButton } from '_atoms';
-import { ExpoLinksView } from '@expo/samples';
+import React, {Component}from 'react';
+import {Platform, Text,ScrollView, StyleSheet, Linking, Button, View, TouchableOpacity, Image} from 'react-native';
+import Colors from '../constants/Colors'
 
-export default function LinksScreen({ navigation }) {
-  return (
-    <ScrollView style={styles.container}>
-      <View style={styles.rectangularButton}>
-        <View>
-         <NavigationButton
-          title="Trocaire Home"
-          navigationOption={'https://www.trocaire.org'}
-          navigateFunction={Linking.openURL}/>
-        </View>
-      </View>
-      <View style={styles.rectangularButton}>
-        <View>
-         <NavigationButton
-          title="Trocaire News"
-          navigationOption={'https://www.trocaire.org/news'}
-          navigateFunction={Linking.openURL}/>
-        </View>
-      </View>
-      <View style={styles.rectangularButton}>
-        <View>
-         <NavigationButton
-          title="Reports about Trocaire"
-          navigationOption={'https://www.google.com/search?q=trocaire&tbm=nws'}
-          navigateFunction={Linking.openURL}/>
-        </View>
-      </View>
-      <View style={styles.rectangularButton}>
-        <View>
-         <NavigationButton
-          title="Twitter"
-          navigationOption={'https://twitter.com/trocaire'}
-          navigateFunction={Linking.openURL}/>
-        </View>
-      </View>
-      <View style={styles.rectangularButton}>
-        <View>
-         <NavigationButton
-          title="Facebook"
-          navigationOption={'https://www.facebook.com/trocaireireland/'}
-          navigateFunction={Linking.openURL}/>
-        </View>
-      </View>
-      <View style={styles.rectangularButton}>
-        <View>
-         <NavigationButton
-          title="Instagram"
-          navigationOption={'https://www.instagram.com/trocaireonline/'}
-          navigateFunction={Linking.openURL}/>
-        </View>
-      </View>
-    </ScrollView>
-  );
+export default class ManualScreen extends Component{
+    render(){
+        return (
+            <View style={styles.container}>
+                <TouchableOpacity style = {styles.button} onPress={()=>Linking.openURL('https://www.trocaire.org')}>
+                    <Text style = {styles.buttonText}>Trocaire Website</Text>
+                </TouchableOpacity>
+                <View style = {styles.border}/>
+                <TouchableOpacity style = {styles.button} onPress={()=>Linking.openURL('https://www.trocaire.org/news')}>
+                    <Text style = {styles.buttonText}>Trocaire Website News</Text>
+                </TouchableOpacity>
+                <View style = {styles.border}/>
+                <TouchableOpacity style = {styles.button} onPress={()=>Linking.openURL('https://www.instagram.com/trocaireonline/')}>
+                    <Text style = {styles.buttonText}>Trocaire Instagram</Text>
+                </TouchableOpacity>
+                <View style = {styles.border}/>
+                <TouchableOpacity style = {styles.button} onPress={()=>Linking.openURL('https://www.facebook.com/trocaireireland/')}>
+                    <Text style = {styles.buttonText}>Trocarire Facebook</Text>
+                </TouchableOpacity>
+                <View style = {styles.border}/>
+                <TouchableOpacity style = {styles.button} onPress={()=>Linking.openURL('https://twitter.com/trocaire')}>
+                    <Text style = {styles.buttonText}>Trocaire Twitter</Text>
+                </TouchableOpacity>
+                <View style = {styles.border}/>
+                <TouchableOpacity style = {styles.button} onPress={()=>Linking.openURL('https://www.google.com/search?q=trocaire&tbm=nws')}>
+                    <Text style = {styles.buttonText}>Google News</Text>
+                </TouchableOpacity>
+                <View style = {styles.border}/>
+            </View>
+      )
+    }
 }
 
-LinksScreen.navigationOptions = {
-  title: 'Links',
-};
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    paddingTop: '5%'
-  },
-  rectangularButton: {
-    paddingLeft: '40%',
-    paddingRight: '40%',
-    paddingTop: '.5%',
-    paddingBottom: '.5%',
-    alignContent: 'center',
-
-    ...Platform.select({
-      android: {
-        paddingLeft: '25%',
-        paddingRight: '25%',
-        paddingTop: '4%',
-        paddingBottom: '4%',
-      },
-    }),
-  },
-  welcomeContainer: {
-    alignItems: 'center',
-    paddingLeft: '20%',
-    paddingRight: '20%',
-    height: '30%',
-    marginBottom: '-5%',
-    marginTop: '5%',
-    ...Platform.select({
-      android: {
-        paddingLeft: '20%',
-        paddingRight: '20%',
-        height: '30%',
-        marginBottom: '-30%',
-        marginTop: '25%',
-      },
-    }),
-  },
-});
+    container:{
+        flex:1,
+        marginBottom:5,
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    button:{
+        backgroundColor:Colors.trocaireBlue,
+        padding:5,
+        height:50,
+        borderRadius:5,
+        width:'85%',
+        justifyContent:'center',
+    },
+    buttonText:{
+        paddingLeft:5,
+        paddingRight:5,
+        fontSize:14,
+        fontWeight:'bold',
+        color:'white',
+        textAlign:'center'
+    },
+    border:{
+        height:15,
+        color: 'white',
+        width:'100%'
+    },
+})

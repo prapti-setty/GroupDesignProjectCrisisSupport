@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     childText:{
         paddingBottom:10,
         fontFamily: 'Univers-Light-Normal',
-        fontWeight:'bold'
+        fontSize:16
     },
     button:{
         alignItems:'center',
