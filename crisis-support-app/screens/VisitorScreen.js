@@ -32,9 +32,6 @@ export default function VisitorScreen({ navigation }) {
                 <NavigationButton title="Kiosk Guidebook" navigationOption={'Manual'} navigateFunction={navigation.navigate}/>
             </View>
             <View style = {styles.rectangularButton}>
-                <NavigationButton title="Forms" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
-            </View>
-            <View style = {styles.rectangularButton}>
                 <NavigationButton title="Complaints" navigationOption={'ComplaintForm'} navigateFunction={navigation.navigate}/>
             </View>
             <View style = {styles.rectangularButton}>
@@ -44,12 +41,6 @@ export default function VisitorScreen({ navigation }) {
                 <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
             </View>
         </ScrollView>
-
-        <View style={styles.bottomBarContainer}>
-            <Text style={styles.bottomBarInfoText}>
-                This is a bar that constantly stays at the bottom!
-            </Text>
-        </View>
     </View>
 
   );

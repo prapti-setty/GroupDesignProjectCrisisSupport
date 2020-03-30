@@ -33,12 +33,6 @@ export default function OpeningScreen({ navigation }) {
         <View style={styles.rectangularButton}>
           <NavigationButton title="Community Help and Feedback" navigationOption={'Visitor'} navigateFunction={navigation.navigate}/>
         </View>
-
-      <View style={styles.bottomBarContainer}>
-        <Text style={styles.bottomBarInfoText}>
-          This is a bar that constantly stays at the bottom!
-        </Text>
-      </View>
     </View>
   );
 }

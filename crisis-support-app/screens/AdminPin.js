@@ -41,12 +41,6 @@ export default function AdminPin({ navigation }) {
             navigateFunction={navigation.navigate}
             keyboardType={'numeric'}
         />
-
-      <View style={styles.bottomBarContainer}>
-        <Text style={styles.bottomBarInfoText}>
-          This is a bar that constantly stays at the bottom!
-        </Text>
-      </View>
     </View>
   );
 }

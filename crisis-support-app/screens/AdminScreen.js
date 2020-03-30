@@ -35,9 +35,6 @@ export default function AdminScreen({ navigation }) {
                 <NavigationButton title="Forms" navigationOption={'Forms'} navigateFunction={navigation.navigate}/>
             </View>
             <View style={styles.rectangularButton}>
-                <NavigationButton title="Complaints" navigationOption={'Complaints'} navigateFunction={navigation.navigate}/>
-            </View>
-            <View style={styles.rectangularButton}>
                 <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
             </View>
 
@@ -45,12 +42,6 @@ export default function AdminScreen({ navigation }) {
                 <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
             </View>
         </ScrollView>
-
-      <View style={styles.bottomBarContainer}>
-        <Text style={styles.bottomBarInfoText}>
-          This is a bar that constantly stays at the bottom!
-        </Text>
-      </View>
     </View>
   );
 }
