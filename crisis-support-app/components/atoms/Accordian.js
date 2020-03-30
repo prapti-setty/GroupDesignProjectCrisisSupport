@@ -25,7 +25,7 @@ export default class Accordian extends Component{
             {
                 this.state.expanded &&
                 <View style={styles.child} >
-                    <Text>{this.props.data}</Text>
+                    <Text style={{fontFamily: 'Univers-Light-Normal'}}>{this.props.data}</Text>
                 </View>
             }
        </View>
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     title:{
         fontSize: 14,
         fontWeight:'bold',
+        fontFamily:'Univers-Condensed',
         color: 'white',
         flex:1,
     },
