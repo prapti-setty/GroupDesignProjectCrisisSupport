@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import { View,ScrollView, Text, StyleSheet, TextInput, Button, Alert,Picker} from "react-native";
+import { View,ScrollView, Text, StyleSheet, TextInput, Button, Alert,Picker, Platform} from "react-native";
 import { Colors } from '_constants';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-import email from 'react-native-email'
+import * as MailComposer from 'expo-mail-composer';
 export default class Form extends Component{
 
     constructor(props) {
@@ -50,14 +50,24 @@ export default class Form extends Component{
 
         }
         this.handleEmail = (subject,recipient,body) => {
-          const to = recipient // string or array of email addresses
-          const answer = body.toString();
-          email(to, {
+          // const to = recipient // string or array of email addresses
+          // const answer = body.toString();
+          // email(to, {
+          //   subject: this.subject,
+          //   body: body.toString()
+          // }).catch(console.error)
+          // console.log(body.toString());
+          if(Platform.OS=='web'){
+            console.log('mailto:someone@yoursite.com?subject=Big%20News&body='+body.toString());
+          }
+          else{
+          MailComposer.composeAsync({
+            recipients: [recipient],
             subject: this.subject,
-            body: body.toString()
-          }).catch(console.error)
-          console.log(body.toString());
+            body:body.toString(),
+          });
         }
+      }
 
     }
 
