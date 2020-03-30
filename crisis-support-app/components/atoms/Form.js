@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View,ScrollView, Text, StyleSheet, TextInput, Button, Alert,Picker, Platform} from "react-native";
+import { View,ScrollView, Text, StyleSheet, TextInput, TouchableOpacity, Button, Alert,Picker, Platform} from "react-native";
 import { Colors } from '_constants';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
 import * as MailComposer from 'expo-mail-composer';
@@ -76,10 +76,18 @@ export default class Form extends Component{
       //<ScrollView >
       <View>
         {this.renderform()}
-        <Button
-          title="Submit"
-          onPress={() => this.formToEmail()}
-        />
+        <TouchableOpacity onPress={() => this.formToEmail()}>
+            <View style={styles.button}>
+              <Text style={styles.textStyle}>
+                    Submit
+              </Text>
+            </View>
+        </TouchableOpacity>
+        {/*<Button*/}
+        {/*  title="Submit"*/}
+        {/*  titleStyle={{fontFamily:'Univers-Light-Normal'}}*/}
+        {/*  onPress={() => this.formToEmail()}*/}
+        {/*/>*/}
       </View>
       //</ScrollView>
    );
@@ -95,48 +103,51 @@ export default class Form extends Component{
         //console.log(this.state.output[item.id]);
         if(item.input === "Yes/No entry")
           items.push(
-            <View key = {item.id}>
+            <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
               <Text style ={styles.heading1}> {item.h1} </Text>
               <Text style ={styles.heading2}> {item.h2} </Text>
-              <Picker selectedValue = {this.state.output[item.id]}
+              <View style={styles.pickerStyle}>
+                  <Picker prompt={"Select:"} selectedValue = {this.state.output[item.id]}
                 onValueChange={(itemValue, itemIndex) => this.updateAnswer(itemValue,item.id)}>
                     <Picker.Item label = " " value = " "  />
                     <Picker.Item label = "Yes" value = "yes" />
                     <Picker.Item label = "No" value = "no" />
                     <Picker.Item label = "N/A" value = "n/a" />
                   </Picker>
+              </View>
+
             </View>
           );
         else if (item.input ==="text entry")
           items.push(
-            <View key = {item.id}>
+            <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
               <Text style ={styles.heading1}> {item.h1} </Text>
               <Text style ={styles.heading2}> {item.h2} </Text>
               <TextInput style={styles.input} value = {this.state.output[item.id]}
-                onChangeText={text => this.updateAnswer(text,item.id) }/>
+                onChangeText={text => this.updateAnswer(text,item.id)} placeholder={"Enter Text"}/>
             </View>
           );
           else if (item.input ==="date entry")
             items.push(
-              <View key = {item.id}>
+              <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
                 <Text style ={styles.heading1}> {item.h1} </Text>
                 <Text style ={styles.heading2}> {item.h2} </Text>
                 <TextInput style={styles.input} value = {this.state.output[item.id]} keyboardType ="number-pad"
-                onChangeText={text => this.updateAnswer(text,item.id)}/>
+                onChangeText={text => this.updateAnswer(text,item.id)} placeholder={"Enter Date"}/>
               </View>
             );
           else if (item.input ==="number entry")
               items.push(
-                <View key = {item.id}>
+                <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
                   <Text style ={styles.heading1}> {item.h1} </Text>
                   <Text style ={styles.heading2}> {item.h2} </Text>
                   <TextInput style={styles.input} value = {this.state.output[item.id]} keyboardType ="number-pad"
-                    onChangeText={text => this.updateAnswer(text,item.id)}/>
+                    onChangeText={text => this.updateAnswer(text,item.id)} placeholder={"Enter Number"}/>
                 </View>
               );
         else
         items.push(
-          <View key = {item.id}>
+          <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
             <Text style ={styles.heading1}> {item.h1} </Text>
             <Text style ={styles.heading2}> {item.h2} </Text>
           </View>
@@ -150,10 +161,12 @@ const styles = StyleSheet.create({
     heading1:{
         fontSize: 14,
         fontWeight:'bold',
+        fontFamily:'Univers-Light-Normal',
         flex:1,
     },
     heading2:{
         fontSize: 12,
+        fontFamily:'Univers-Condensed',
         flex:1,
     },
     input:{
@@ -161,5 +174,39 @@ const styles = StyleSheet.create({
       backgroundColor:Colors.formBackground,
       borderColor: 'gray',
       borderWidth: 1,
-    }
+      width:'99%',
+      alignSelf:'center'
+    },
+    pickerStyle:{
+        width:'99%',
+        alignSelf: 'center',
+        ...Platform.select({
+            android: {
+                borderWidth: 1,
+                borderColor: 'black',
+                borderStyle: 'solid',
+        },
+    }),
+
+    },
+    button:{
+        height:40,
+        width:'100%',
+        backgroundColor: '#0085ca',
+        alignItems:'center',
+        borderWidth: 1,
+        borderColor: 'black',
+    },
+    textStyle:{
+        fontFamily: 'Univers-Condensed',
+        color: 'white',
+        fontSize: 21,
+        textAlign: 'center',
+        paddingTop: '0.45%',
+        ...Platform.select({
+        android: {
+            paddingTop: '1.5%',
+        }
+    }),
+  }
 });

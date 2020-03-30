@@ -32,31 +32,31 @@ export default class JsonForm extends Component {
     render() {
       return(
           <ScrollView >
-          <View>
+          <View style={{paddingBottom:'1%'}}>
             <Text style = {styles.container}>1. Memorandum of understanding</Text>
               <Form data = {this.state.form1} title = "Memorandum of understanding"/>
           </View>
-            <View>
+            <View style={{paddingBottom:'1%'}}>
               <Text style = {styles.container}>2. Implementation Checklist</Text>
                 <Form data = {this.state.form2} title = "Implementation Checklist"/>
             </View>
-            <View>
+            <View style={{paddingBottom:'1%'}}>
                <Text style = {styles.container}>3. Information Needs Assessment</Text>
                 <Form data = {this.state.form3} title = "Information Needs Assessment"/>
             </View>
-            <View>
+            <View style={{paddingBottom:'1%'}}>
                <Text style = {styles.container}>4. Identifying the Location</Text>
                 <Form data = {this.state.form4} title = "Identifying the Location"/>
             </View>
-            <View>
+            <View style={{paddingBottom:'1%'}}>
                <Text style = {styles.container}>5. Kiosk/Outreach Plan</Text>
                 <Form data = {this.state.form5}/>
             </View>
-            <View>
+            <View style={{paddingBottom:'1%'}}>
                <Text style = {styles.container}>7. Code of Conduct Guidance</Text>
                 <Form data = {this.state.form7}/>
             </View>
-            <View>
+            <View style={{paddingBottom:'1%'}}>
                <Text style = {styles.container}>16. Safe Recruitment Checklist</Text>
                 <Form data = {this.state.form16}/>
             </View>
@@ -69,10 +69,12 @@ export default class JsonForm extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 10,
+    fontFamily: 'Univers-Condensed',
+    paddingTop: 11,
+    paddingBottom: 10,
     backgroundColor:Colors.trocaireBlue,
     color: '#FFFFFF',
-    fontSize: 16,
+    fontSize: 21,
   },
 
 });
