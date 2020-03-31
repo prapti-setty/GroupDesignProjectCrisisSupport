@@ -103,7 +103,7 @@ export default class Form extends Component{
         //console.log(this.state.output[item.id]);
         if(item.input === "Yes/No entry")
           items.push(
-            <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
+            <View key = {item.id} style={styles.viewContainer}>
               <Text style ={styles.heading1}> {item.h1} </Text>
               <Text style ={styles.heading2}> {item.h2} </Text>
               <View style={styles.pickerStyle}>
@@ -120,7 +120,7 @@ export default class Form extends Component{
           );
         else if (item.input ==="text entry")
           items.push(
-            <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
+            <View key = {item.id} style={styles.viewContainer}>
               <Text style ={styles.heading1}> {item.h1} </Text>
               <Text style ={styles.heading2}> {item.h2} </Text>
               <TextInput style={styles.input} value = {this.state.output[item.id]}
@@ -129,7 +129,7 @@ export default class Form extends Component{
           );
           else if (item.input ==="date entry")
             items.push(
-              <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
+              <View key = {item.id} style={styles.viewContainer}>
                 <Text style ={styles.heading1}> {item.h1} </Text>
                 <Text style ={styles.heading2}> {item.h2} </Text>
                 <TextInput style={styles.input} value = {this.state.output[item.id]} keyboardType ="number-pad"
@@ -138,7 +138,7 @@ export default class Form extends Component{
             );
           else if (item.input ==="number entry")
               items.push(
-                <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
+                <View key = {item.id} style={styles.viewContainer}>
                   <Text style ={styles.heading1}> {item.h1} </Text>
                   <Text style ={styles.heading2}> {item.h2} </Text>
                   <TextInput style={styles.input} value = {this.state.output[item.id]} keyboardType ="number-pad"
@@ -147,7 +147,7 @@ export default class Form extends Component{
               );
         else
         items.push(
-          <View key = {item.id} style={{paddingBottom:'0.75%', width: '99%', alignSelf: 'center'}}>
+          <View key = {item.id} style={styles.viewContainer}>
             <Text style ={styles.heading1}> {item.h1} </Text>
             <Text style ={styles.heading2}> {item.h2} </Text>
           </View>
@@ -169,12 +169,19 @@ const styles = StyleSheet.create({
         fontFamily:'Univers-Condensed',
         flex:1,
     },
+    viewContainer:{
+        paddingTop:'0.75%',
+        width: '95%',
+        alignSelf: 'center'
+    },
     input:{
       height: 40,
       backgroundColor:Colors.formBackground,
-      borderColor: 'gray',
+      borderColor: Colors.trocaireBlue,
+      borderRadius:5,
+      paddingLeft:10,
       borderWidth: 1,
-      width:'99%',
+      width:'100%',
       alignSelf:'center'
     },
     pickerStyle:{
@@ -183,19 +190,19 @@ const styles = StyleSheet.create({
         ...Platform.select({
             android: {
                 borderWidth: 1,
-                borderColor: 'black',
+                borderColor: Colors.trocaireBlue,
+                borderRadius:5,
                 borderStyle: 'solid',
         },
     }),
 
     },
     button:{
+        marginTop:10,
         height:40,
         width:'100%',
         backgroundColor: '#0085ca',
         alignItems:'center',
-        borderWidth: 1,
-        borderColor: 'black',
     },
     textStyle:{
         fontFamily: 'Univers-Condensed',

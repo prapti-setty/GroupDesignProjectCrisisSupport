@@ -53,10 +53,10 @@ const styles = StyleSheet.create({
     buttonText:{
         paddingLeft:5,
         paddingRight:5,
-        fontSize:14,
+        fontSize:16,
         fontWeight:'bold',
         color:'white',
-        textAlign:'center'
+        textAlign:'center',
     },
     border:{
         height:15,

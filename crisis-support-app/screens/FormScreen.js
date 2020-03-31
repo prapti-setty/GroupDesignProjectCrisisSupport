@@ -31,35 +31,41 @@ export default class JsonForm extends Component {
   }
     render() {
       return(
-          <ScrollView >
-          <View style={{paddingBottom:'1%'}}>
-            <Text style = {styles.container}>1. Memorandum of understanding</Text>
-              <Form data = {this.state.form1} title = "Memorandum of understanding"/>
-          </View>
-            <View style={{paddingBottom:'1%'}}>
-              <Text style = {styles.container}>2. Implementation Checklist</Text>
-                <Form data = {this.state.form2} title = "Implementation Checklist"/>
-            </View>
-            <View style={{paddingBottom:'1%'}}>
-               <Text style = {styles.container}>3. Information Needs Assessment</Text>
-                <Form data = {this.state.form3} title = "Information Needs Assessment"/>
-            </View>
-            <View style={{paddingBottom:'1%'}}>
-               <Text style = {styles.container}>4. Identifying the Location</Text>
-                <Form data = {this.state.form4} title = "Identifying the Location"/>
-            </View>
-            <View style={{paddingBottom:'1%'}}>
-               <Text style = {styles.container}>5. Kiosk/Outreach Plan</Text>
-                <Form data = {this.state.form5}/>
-            </View>
-            <View style={{paddingBottom:'1%'}}>
-               <Text style = {styles.container}>7. Code of Conduct Guidance</Text>
-                <Form data = {this.state.form7}/>
-            </View>
-            <View style={{paddingBottom:'1%'}}>
-               <Text style = {styles.container}>16. Safe Recruitment Checklist</Text>
-                <Form data = {this.state.form16}/>
-            </View>
+          <ScrollView style={styles.container}>
+                <View style={styles.formContainer}>
+                    <Text style = {styles.formhHeader}>1. Memorandum of understanding</Text>
+                    <Form data = {this.state.form1} title = "Memorandum of understanding"/>
+                </View>
+                <View style = {styles.border}/>
+                <View style={styles.formContainer}>
+                    <Text style = {styles.formhHeader}>2. Implementation Checklist</Text>
+                    <Form data = {this.state.form2} title = "Implementation Checklist"/>
+                </View>
+                <View style = {styles.border}/>
+                <View style={styles.formContainer}>
+                    <Text style = {styles.formhHeader}>3. Information Needs Assessment</Text>
+                    <Form data = {this.state.form3} title = "Information Needs Assessment"/>
+                </View>
+                <View style = {styles.border}/>
+                <View style={styles.formContainer}>
+                    <Text style = {styles.formhHeader}>4. Identifying the Location</Text>
+                    <Form data = {this.state.form4} title = "Identifying the Location"/>
+                </View>
+                <View style = {styles.border}/>
+                <View style={styles.formContainer}>
+                    <Text style = {styles.formhHeader}>5. Kiosk/Outreach Plan</Text>
+                    <Form data = {this.state.form5}/>
+                </View>
+                <View style = {styles.border}/>
+                <View style={styles.formContainer}>
+                    <Text style = {styles.formhHeader}>7. Code of Conduct Guidance</Text>
+                    <Form data = {this.state.form7}/>
+                </View>
+                <View style = {styles.border}/>
+                <View style={styles.formContainer}>
+                    <Text style = {styles.formhHeader}>16. Safe Recruitment Checklist</Text>
+                    <Form data = {this.state.form16}/>
+                </View>
           </ScrollView>
         );
     }
@@ -67,14 +73,28 @@ export default class JsonForm extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    fontFamily: 'Univers-Condensed',
-    paddingTop: 11,
-    paddingBottom: 10,
-    backgroundColor:Colors.trocaireBlue,
-    color: '#FFFFFF',
-    fontSize: 21,
-  },
-
+    container: {
+        flex: 1,
+        paddingTop:20,
+        paddingLeft:20,
+        paddingRight:20
+    },
+    formContainer:{
+        borderWidth:2,
+        borderRadius:5,
+        borderColor:Colors.trocaireBlue
+    },
+    border:{
+        height:2,
+        paddingTop:20,
+        paddingBottom:20
+    },
+    formhHeader:{
+        fontFamily: 'Univers-Condensed',
+        textAlign:'center',
+        padding:10,
+        backgroundColor:Colors.trocaireBlue,
+        color: 'white',
+        fontSize: 21,
+  }
 });
