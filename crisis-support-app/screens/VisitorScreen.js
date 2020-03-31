@@ -37,9 +37,6 @@ export default function VisitorScreen({ navigation }) {
             <View style = {styles.rectangularButton}>
                 <NavigationButton title="Links" navigationOption={'Links'} navigateFunction={navigation.navigate}/>
             </View>
-            <View style = {styles.rectangularButton}>
-                <NavigationButton title="Settings" navigationOption={'Settings'} navigateFunction={navigation.navigate}/>
-            </View>
         </ScrollView>
     </View>
 
