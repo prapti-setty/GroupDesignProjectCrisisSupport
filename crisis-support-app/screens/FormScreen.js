@@ -6,7 +6,8 @@ import Form from '../components/atoms/Form';
 
 import form1 from  '../assets/Json Files/Memorandum of understanding.json';
 import form2 from  '../assets/Json Files/Implementation Checklist.json';
-import form3 from  '../assets/Json Files/Information Needs Assessment.json';
+import form3A from  '../assets/Json Files/Information Needs Assessment A.json';
+import form3B from  '../assets/Json Files/Information Needs Assessment B.json';
 import form4 from  '../assets/Json Files/Identifying The Location.json';
 import form5 from  '../assets/Json Files/KioskOutreach Plan.json';
 import form7 from  '../assets/Json Files/Code of Conduct Guidance.json';
@@ -22,7 +23,8 @@ export default class JsonForm extends Component {
     this.state = {
       form1: form1,
       form2: form2,
-      form3: form3,
+      form3A: form3A,
+      form3B: form3B,
       form4: form4,
       form5: form5,
       form7: form7,
@@ -43,8 +45,13 @@ export default class JsonForm extends Component {
                 </View>
                 <View style = {styles.border}/>
                 <View style={styles.formContainer}>
-                    <Text style = {styles.formhHeader}>3. Information Needs Assessment</Text>
-                    <Form data = {this.state.form3} title = "Information Needs Assessment"/>
+                    <Text style = {styles.formhHeader}>3A. Information Needs Assessment</Text>
+                    <Form data = {this.state.form3A} title = "Information Needs Assessment A"/>
+                </View>
+                <View style = {styles.border}/>
+                <View style={styles.formContainer}>
+                    <Text style = {styles.formhHeader}>3B. Information Needs Assessment</Text>
+                    <Form data = {this.state.form3B} title = "Information Needs Assessment B"/>
                 </View>
                 <View style = {styles.border}/>
                 <View style={styles.formContainer}>

@@ -2,100 +2,109 @@ import React, {Component} from 'react';
 import { View,ScrollView, Text, StyleSheet, TextInput, TouchableOpacity, Button, Alert,Picker, Platform} from "react-native";
 import { Colors } from '_constants';
 import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
+import {Constants} from 'expo';
+import { Asset } from 'expo-asset';
 import * as MailComposer from 'expo-mail-composer';
 export default class Form extends Component{
 
-    constructor(props) {
-        super(props);
-        this.state = {
-          data: props.data,
-          output: [],
-          _update:"",
-        }
-        this.subject = props.title;
-        this.recipient ="figawaf815@mrisemail.com";
-        this.updateAnswer = (answer,index) => {
-          const newArray = [...this.state.output];
-          newArray[index] = answer;
-          this.setState({ output: newArray });
-          //console.log(answer);
-          //console.log(index);
-        }
-        this.formToEmail= ()=>{
-          const body= [];
-          for(let item of this.state.data){
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: props.data,
+      output: [],
+      _update:"",
+    }
+    this.subject = props.title;
+    this.recipient ="figawaf815@mrisemail.com";
+    this.updateAnswer = (answer,index) => {
+      const newArray = [...this.state.output];
+      newArray[index] = answer;
+      this.setState({ output: newArray });
+      //console.log(answer);
+      //console.log(index);
+    }
+    this.formToEmail= ()=>{
+      const body= [];
+      for(let item of this.state.data){
 
-            if(item.h1 !==undefined && item.h2 === undefined && this.state.output[item.id]===undefined){
+        if(Platform.OS=='web'){
+          body.push(
+            item.id+" "+ this.state.output[item.id]+"\n"
+          );
+        }
+        else{
+          if(item.h1 !==undefined && item.h2 === undefined && this.state.output[item.id]===undefined){
             body.push(
               item.h1+ "\n"
             );
-            }
-            else if(item.h1 !==undefined && item.h2 === undefined){
+          }
+          else if(item.h1 !==undefined && item.h2 === undefined){
             body.push(
               item.h1+" " + this.state.output[item.id] + "\n"
             );
-            }
-            else if (item.h1 ===undefined && item.h2 !== undefined){
+          }
+          else if (item.h1 ===undefined && item.h2 !== undefined){
             body.push(
               item.h2+" " + this.state.output[item.id] + "\n"
             );
-            }
-            else{
-              body.push(
-                item.h1 +" "+item.h2 +" "+ this.state.output[item.id] + "\n"
-              );
-            }
-          }
-          this.handleEmail(" "," ",body);
-
-        }
-        this.handleEmail = (subject,recipient,body) => {
-          // const to = recipient // string or array of email addresses
-          // const answer = body.toString();
-          // email(to, {
-          //   subject: this.subject,
-          //   body: body.toString()
-          // }).catch(console.error)
-          // console.log(body.toString());
-          if(Platform.OS=='web'){
-            console.log('mailto:someone@yoursite.com?subject=Big%20News&body='+body.toString());
           }
           else{
-          MailComposer.composeAsync({
-            recipients: [recipient],
-            subject: this.subject,
-            body:body.toString(),
-          });
+            body.push(
+              item.h1 +" "+item.h2 +" "+ this.state.output[item.id] + "\n"
+            );
+          }
         }
       }
 
+      this.handleEmail(" "," ",body);
+
     }
+    this.handleEmail = (subject,recipient,body) => {
+      const attachment1 = Asset.fromModule(require('../../assets/images/icon.png')).localUri;
+      console.log(attachment1);
+      // const to = recipient // string or array of email addresses
+      // const answer = body.toString();
+      // email(to, {
+      //   subject: this.subject,
+      //   body: body.toString()
+      // }).catch(console.error)
+      // console.log(body.toString())
+      MailComposer.composeAsync({
+        recipients: [recipient],
+        subject: this.subject,
+        body:body.toString(),
+        attachments: [attachment1]
+      });
+    }
+
+  }
 
   render() {
     return (
       //<ScrollView >
       <View>
-        {this.renderform()}
-        <TouchableOpacity onPress={() => this.formToEmail()}>
-            <View style={styles.button}>
-              <Text style={styles.textStyle}>
-                    Submit
-              </Text>
-            </View>
-        </TouchableOpacity>
-        {/*<Button*/}
-        {/*  title="Submit"*/}
-        {/*  titleStyle={{fontFamily:'Univers-Light-Normal'}}*/}
-        {/*  onPress={() => this.formToEmail()}*/}
-        {/*/>*/}
+      {this.renderform()}
+      <TouchableOpacity onPress={() => this.formToEmail()}>
+      <View style={styles.button}>
+      <Text style={styles.textStyle}>
+      Submit
+      </Text>
+      </View>
+      </TouchableOpacity>
+      {/*<Button*/}
+      {/*  title="Submit"*/}
+      {/*  titleStyle={{fontFamily:'Univers-Light-Normal'}}*/}
+      {/*  onPress={() => this.formToEmail()}*/}
+      {/*/>*/}
       </View>
       //</ScrollView>
-   );
+    );
   }
 
 
 
   renderform() {
+    Asset.fromModule(require('../../assets/images/icon.png')).downloadAsync();
 
     //console.log("re rendered");
     const items = [];
@@ -144,6 +153,7 @@ export default class Form extends Component{
                     onChangeText={text => this.updateAnswer(text,item.id)} placeholder={"Enter Number"}/>
                 </View>
               );
+          
         else
         items.push(
           <View key = {item.id} style={styles.viewContainer}>

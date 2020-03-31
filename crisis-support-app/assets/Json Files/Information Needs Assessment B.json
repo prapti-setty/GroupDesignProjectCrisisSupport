@@ -1,0 +1,192 @@
+[
+  {
+    "id": 83,
+    "h1": "B. Which sources do people trust the LEAST?",
+    "input": ""
+  },
+  {
+    "id": 84,
+    "h1": "Television (specify channel)",
+    "input": "number entry"
+  },
+  {
+    "id": 85,
+    "h1": "Government",
+    "input": "number entry"
+  },
+  {
+    "id": 86,
+    "h1": "NGO worker",
+    "input": "number entry"
+  },
+  {
+    "id": 87,
+    "h1": "Radio (specify station)",
+    "input": "number entry"
+  },
+  {
+    "id": 88,
+    "h1": "Other community members",
+    "input": "number entry"
+  },
+  {
+    "id": 89,
+    "h1": "Other (write in)",
+    "input": "number entry"
+  },
+  {
+    "id": 90,
+    "h1": "Internet (specify site)",
+    "input": "number entry"
+  },
+  {
+    "id": 91,
+    "h1": "Religious leader",
+    "input": "number entry"
+  },
+  {
+    "id": 92,
+    "h1": "Don’t know",
+    "input": "number entry"
+  },
+  {
+    "id": 93,
+    "h1": "Social media (specify)",
+    "input": "number entry"
+  },
+  {
+    "id": 94,
+    "h1": "Armed forces",
+    "input": "number entry"
+  },
+  {
+    "id": 95,
+    "h1": "Refused",
+    "input": "number entry"
+  },
+  {
+    "id": 96,
+    "h1": "Health professional",
+    "input": "number entry"
+  },
+  {
+    "id": 97,
+    "h1": "Police",
+    "input": "number entry"
+  },
+  {
+    "id": 98,
+    "h1": "",
+    "input": ""
+  },
+  {
+    "id": 99,
+    "h1": "What would the community like more information on at the moment? What do you need to know more about? [WARNING: This question is often misinterpreted to mean general needs rather than information needs, and may need further explanation; avoid leading the respondent]",
+    "input": ""
+  },
+  {
+    "id": 100,
+    "h1": "News on what is happening The weather",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 101,
+    "h1": "How to get healthcare/medical attention",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 102,
+    "h1": "Finding missing people How to get help after attack or harassment",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 103,
+    "h1": "The security situation here",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 104,
+    "h1": "How to stay safe to prevent attack/harassment",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 105,
+    "h1": "Communicating with people who are in a different place",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 106,
+    "h1": "How to replace personal documentation (e.g. ID, birth cert)",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 107,
+    "h1": "How to register for assistance",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 108,
+    "h1": "How to get access to education How to get water",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 109,
+    "h1": "How to find work",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 110,
+    "h1": "How to get food",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 111,
+    "h1": "How to get transport",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 112,
+    "h1": "How to get shelter/accommodation or shelter materials",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 113,
+    "h1": "How to get money/financial support",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 114,
+    "h1": "Information about nutrition",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 115,
+    "h1": "Information about relocation",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 116,
+    "h1": "Food prices",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 117,
+    "h1": "Other (write in)",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 118,
+    "h1": "Local crop/livestock prices",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 119,
+    "h1": "Don’t know",
+    "input": "Yes/No entry"
+  },
+  {
+    "id": 120,
+    "h1": "How to get cooking fuel/firewood",
+    "input": "Yes/No entry"
+  }
+]

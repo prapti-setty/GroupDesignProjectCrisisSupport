@@ -1,0 +1,137 @@
+[
+  {
+    "id": 0,
+    "h1": "A. What are the main channels of communication available to your community now? [Rank top 3 only, 1 = most useful]",
+    "input": ""
+  },
+  {
+    "id": 1,
+    "h1": "Leaflets",
+    "input": "number entry"
+  },
+  {
+    "id": 2,
+    "h1": "Television",
+    "input": "number entry"
+  },
+  {
+    "id": 3,
+    "h1": "Radio",
+    "input": "number entry"
+  },
+  {
+    "id": 4,
+    "h1": "NewsPapers",
+    "input": "number entry"
+  },
+  {
+    "id": 5,
+    "h1": "Magazines",
+    "input": "number entry"
+  },
+  {
+    "id": 6,
+    "h1": "Social Media",
+    "input": "number entry"
+  },
+  {
+    "id": 7,
+    "h1": "Mobile (Calls)",
+    "input": "number entry"
+  },
+  {
+    "id": 8,
+    "h1": "Mobile (SMS)",
+    "input": "number entry"
+  },
+  {
+    "id": 9,
+    "h1": "Loudspeaker",
+    "input": "number entry"
+  },
+  {
+    "id": 10,
+    "h1": "Internet",
+    "input": "number entry"
+  },
+  {
+    "id": 11,
+    "h1": "Religious Leaders",
+    "input": "number entry"
+  },
+  {
+    "id": 12,
+    "h1": "Government",
+    "input": "number entry"
+  },
+  {
+    "id": 13,
+    "h1": "Friends and Family",
+    "input": "number entry"
+  },
+  {
+    "id": 14,
+    "h1": "Health Professionals",
+    "input": "number entry"
+  },
+  {
+    "id": 15,
+    "h1": "Music",
+    "input": "number entry"
+  },
+  {
+    "id": 16,
+    "h1": "Posters",
+    "input": "number entry"
+  },
+  {
+    "id": 17,
+    "h1": "Community Leaders",
+    "input": "number entry"
+  },
+  {
+    "id": 18,
+    "h1": "Theatre",
+    "input": "number entry"
+  },
+  {
+    "id": 19,
+    "h1": "Other",
+    "input": "number entry"
+  },
+  {
+    "id": 20,
+    "h1": "Bush Radio",
+    "input": "number entry"
+  },
+  {
+    "id": 21,
+    "h1": "Billboards",
+    "input": "number entry"
+  },
+  {
+    "id": 22,
+    "h1": "Word of Mouth",
+    "input": "number entry"
+  },
+  {
+    "id": 23,
+    "h1": "Film",
+    "input": "number entry"
+  },
+  {
+    "id": 24,
+    "h1": "Refused",
+    "input": "number entry"
+  },
+  {
+    "id": 25,
+    "h1": "Don't Know",
+    "input": "number entry"
+  },
+  {
+    "id": 26,
+    "h1": "",
+    "input": ""
+  }
+]
