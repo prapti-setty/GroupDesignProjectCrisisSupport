@@ -115,7 +115,6 @@ export default class Form extends Component{
                     <Picker.Item label = "N/A" value = "n/a" />
                   </Picker>
               </View>
-
             </View>
           );
         else if (item.input ==="text entry")
@@ -166,7 +165,7 @@ const styles = StyleSheet.create({
     },
     heading2:{
         fontSize: 12,
-        fontFamily:'Univers-Condensed',
+        fontFamily:'Univers-Light-Normal',
         flex:1,
     },
     viewContainer:{
